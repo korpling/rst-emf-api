@@ -20,6 +20,7 @@
   </properties>
   <scm>
     <developerConnection>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/Misc/RSTModel/trunk</developerConnection>
+    <tag>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/Misc/RSTModel/trunk</tag>
   </scm>
   <distributionManagement>
     <repository>
