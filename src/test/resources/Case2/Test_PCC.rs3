@@ -1,0 +1,78 @@
+<rst>
+<header>
+<encoding name="UTF-8" />
+<relations>
+<!-- attention: this is done by a heuristic and can not be precisly computed. -->
+<rel name="span" type="rst" />
+<rel name="span" type="multinuc" />
+<rel name="elaboration" type="rst" />
+<rel name="elaboration" type="multinuc" />
+<rel name="joint" type="rst" />
+<rel name="joint" type="multinuc" />
+<rel name="concession" type="rst" />
+<rel name="concession" type="multinuc" />
+<rel name="evaluation" type="rst" />
+<rel name="evaluation" type="multinuc" />
+<rel name="list" type="rst" />
+<rel name="list" type="multinuc" />
+<rel name="nonvolitional-result" type="rst" />
+<rel name="nonvolitional-result" type="multinuc" />
+<rel name="background" type="rst" />
+<rel name="background" type="multinuc" />
+<rel name="nonvolitional-cause" type="rst" />
+<rel name="nonvolitional-cause" type="multinuc" />
+<rel name="circumstance" type="rst" />
+<rel name="circumstance" type="multinuc" />
+</relations>
+</header>
+<body>
+<segment id="0">Wendefehler  </segment>
+<segment id="1" parent="23" relname="span"> Heranwachsende  haben  seit  jeher  und  &#252;berall  ein  Problem  gehabt  :</segment>
+<segment id="2" parent="1" relname="elaboration"> Sie  sind  rebellisch  und  machen  dumme  Sachen  .</segment>
+<segment id="3" parent="43" relname="joint"> Sie  wegzuschlie&#223;en  , </segment>
+<segment id="4" parent="43" relname="joint"> scheint  eine  L&#246;sung  zu  sein  .</segment>
+<segment id="5" parent="26" relname="span"> Aber  nicht  alle  Jugendlichen  lassen  sich  w&#228;hrend  schwieriger  Lebensphasen  einfach  wegsperren  .</segment>
+<segment id="6" parent="27" relname="span"> Deshalb  ist  es  sehr  lobenswert  ,  dass  sich  auch  in  K&#246;nigs  Wusterhausen  der  Verein  Jugendrechtshaus  gegr&#252;ndet  hat  .</segment>
+<segment id="7" parent="28" relname="span"> 38  M&#228;nner  und  Frauen  aus  dem  Ort  erkl&#228;rten  sich  bereit  ohne  Gegenleistung  in  die  Zukunft  zu  investieren  :</segment>
+<segment id="8" parent="7" relname="elaboration"> in  Kinder  und  Jugendliche  .</segment>
+<segment id="9" parent="29" relname="span"> Sie  wollen  Rechtsbewusstsein  lehren  ,  Ansprechpartner  sein  und  die  jungen  Leute  an  die  Regeln  des  menschlichen  Zusammenlebens  heranf&#252;hren  .</segment>
+<segment id="10" parent="30" relname="span"> Auch  weil  Elternh&#228;user  und  Schulen  dies  nicht  immer  schaffen  .</segment>
+<segment id="11" parent="42" relname="concession"> Orientierungslose  Menschen  gibt  es  &#252;berall  .</segment>
+<segment id="12" parent="44" relname="joint"> Vielen  Ostdeutschen  wurde  wendebedingt  jedoch  eingeredet  :</segment>
+<segment id="13" parent="32" relname="span"> Ihr  habt  alles  falsch  gemacht  !</segment>
+<segment id="14" parent="44" relname="evaluation"> Und  das  irritiert  .</segment>
+<segment id="15" parent="46" relname="list"> Zudem  verlor  ein  Gro&#223;teil  der  ehemaligen  DDR-B&#252;rger  die  Arbeit  ,  damit  den  sozialen  Halt  .</segment>
+<segment id="16" parent="35" relname="span"> Eltern  ,  die  selbst  um  ihr  Gleichgewicht  k&#228;mpfen  , </segment>
+<segment id="17" parent="16" relname="nonvolitional-result"> haben  mit  sich  selbst  zu  tun  .</segment>
+<segment id="18" parent="36" relname="span"> Sie  k&#246;nnen  nur  bedingt  Gespr&#228;chspartner  und  Vorbilder  sein  .</segment>
+<segment id="19" parent="37" relname="span"> Die  Vereinsmitglieder  des  Jugendrechtshauses  wollen  zuh&#246;ren  .</segment>
+<segment id="20" parent="19" relname="evaluation"> Und  das  ist  ein  guter  erster  Schritt  .</segment>
+<segment id="21" parent="37" relname="evaluation"> Hoffentlich  folgen  weitere  .</segment>
+<segment id="22"> </segment>
+<group id="23" type="span" parent="24" relname="background" />
+<group id="24" type="span" parent="25" relname="span" />
+<group id="27" type="span" parent="41" relname="span" />
+<group id="28" type="span" parent="40" relname="span" />
+<group id="29" type="span" parent="39" relname="list" />
+<group id="30" type="span" parent="47" relname="span" />
+<group id="32" type="span" parent="44" relname="joint" />
+<group id="35" type="span" parent="18" relname="nonvolitional-cause" />
+<group id="36" type="span" parent="34" relname="span" />
+<group id="37" type="span" parent="38" relname="span" />
+<group id="38" type="span" parent="39" relname="list" />
+<group id="39" type="multinuc" parent="28" relname="elaboration" />
+<group id="40" type="span" parent="27" relname="elaboration" />
+<group id="41" type="span" parent="0" relname="elaboration" />
+<group id="25" type="span" parent="5" relname="concession" />
+<group id="26" type="span" parent="6" relname="nonvolitional-cause" />
+<group id="43" type="multinuc" parent="24" relname="span" />
+<group id="42" type="span" parent="31" relname="span" />
+<group id="31" type="span" parent="33" relname="span" />
+<group id="44" type="multinuc" parent="45" relname="span" />
+<group id="45" type="span" parent="46" relname="list" />
+<group id="46" type="multinuc" parent="42" relname="span" />
+<group id="33" type="span" parent="36" relname="nonvolitional-cause" />
+<group id="34" type="span" parent="30" relname="nonvolitional-cause" />
+<group id="47" type="span" parent="9" relname="circumstance" />
+</body>
+</rst>
