@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
   <artifactId>misc-RSTModel</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>bundle</packaging>
   <licenses>
     <license>
@@ -19,7 +19,7 @@
     <notice.file>${basedir}/NOTICE</notice.file>
   </properties>
   <scm>
-    <developerConnection>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/Misc/RSTModel/trunk</developerConnection>
+    <developerConnection>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/Misc/RSTModel/tags/misc-RSTModel-0.0.1</developerConnection>
     <tag>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/Misc/RSTModel/trunk</tag>
   </scm>
   <distributionManagement>
