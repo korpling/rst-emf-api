@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
   <artifactId>misc-RSTModel</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <licenses>
     <license>
@@ -20,6 +20,7 @@
   </properties>
   <scm>
     <developerConnection>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/Misc/RSTModel/trunk</developerConnection>
+    <tag>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/Misc/RSTModel/trunk</tag>
   </scm>
   <distributionManagement>
     <repository>
@@ -87,7 +88,7 @@
             <descriptor>${assemblies.name}</descriptor>
           </descriptors>
           <appendAssemblyId>false</appendAssemblyId>
-          <finalName>${project.groupId}.${project.artifactId}_${project.version}</finalName>
+          <finalName>${project.groupId}.misc.${project.artifactId}_${project.version}</finalName>
           <outputDirectory>target/distribution</outputDirectory>
           <workDirectory>target/assembly/work</workDirectory>
         </configuration>
