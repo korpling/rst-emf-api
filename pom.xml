@@ -156,7 +156,7 @@
 
           </tagBase>
           <releaseProfiles>release</releaseProfiles>
-          <goals>deploy assembly:single</goals>
+          <goals>package assembly:single deploy</goals>
         </configuration>
       </plugin>
       <plugin>
