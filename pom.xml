@@ -168,7 +168,7 @@
           <execution>
             <phase>process-classes</phase>
             <goals>
-              <goal>bundle</goal>
+              <goal>manifest</goal>
             </goals>
           </execution>
         </executions>
