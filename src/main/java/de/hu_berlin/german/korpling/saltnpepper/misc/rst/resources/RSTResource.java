@@ -18,13 +18,18 @@
 package de.hu_berlin.german.korpling.saltnpepper.misc.rst.resources;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
@@ -72,29 +77,76 @@ public class RSTResource extends ResourceImpl
 		
 		SAXParser parser;
         XMLReader xmlReader;
-        try {
-        	SAXParserFactory factory= SAXParserFactory.newInstance();
+        RSTReader rstReader= new RSTReader();
+        rstReader.setRstFile(rstFile);
+        rstReader.setRSTDocument(rstDocument);
         
-			parser= factory.newSAXParser();
-		
+        SAXParserFactory factory= SAXParserFactory.newInstance();
+        
+        try
+        {
+        	parser= factory.newSAXParser();
 	        xmlReader= parser.getXMLReader();
-
-	        //create and set content handler
-	        RSTReader rstReader= new RSTReader();
-	        rstReader.setRstFile(rstFile);
-	        rstReader.setRSTDocument(rstDocument);
-	        xmlReader.setContentHandler(rstReader);
-	        
 	        //setting LexicalHandler to read DTD
-	        xmlReader.setProperty("http://xml.org/sax/properties/lexical-handler", rstReader);
-	        xmlReader.setContentHandler(rstReader);
-	        
-	        xmlReader.parse(rstFile.getAbsolutePath());
-	        
-	    } catch (ParserConfigurationException e) {
+            xmlReader.setProperty("http://xml.org/sax/properties/lexical-handler", rstReader);
+            xmlReader.setContentHandler(rstReader);
+        } catch (ParserConfigurationException e) {
         	throw new RSTException("Cannot load exmaralda from resource '"+rstFile.getAbsolutePath()+"'.", e);
-        } catch (SAXException e) {
-        	throw new RSTException("Cannot load exmaralda from resource '"+rstFile.getAbsolutePath()+"'.", e);
+        }catch (Exception e) {
+	    	throw new RSTException("Cannot load exmaralda from resource '"+rstFile.getAbsolutePath()+"'.", e);
 		}
+        try {
+	        InputStream inputStream= new FileInputStream(rstFile);
+			Reader reader = new InputStreamReader(inputStream, "UTF-8");
+			 
+			InputSource is = new InputSource(reader);
+			is.setEncoding("UTF-8");
+			 
+			xmlReader.parse(is);
+			
+	    
+        } catch (SAXException e) 
+        {
+        	
+            try
+            {
+				parser= factory.newSAXParser();
+		        xmlReader= parser.getXMLReader();
+				xmlReader.parse(rstFile.getAbsolutePath());
+				//setting LexicalHandler to read DTD
+	            xmlReader.setProperty("http://xml.org/sax/properties/lexical-handler", rstReader);
+	            xmlReader.setContentHandler(rstReader);
+            }catch (Exception e1) {
+            	throw new RSTException("Cannot load exmaralda from resource '"+rstFile.getAbsolutePath()+"'.", e1);
+			}
+		}
+		
+		
+//		SAXParser parser;
+//        XMLReader xmlReader;
+//        try {
+//        	SAXParserFactory factory= SAXParserFactory.newInstance();
+//        
+//			parser= factory.newSAXParser();
+//		
+//	        xmlReader= parser.getXMLReader();
+//
+//	        //create and set content handler
+//	        RSTReader rstReader= new RSTReader();
+//	        rstReader.setRstFile(rstFile);
+//	        rstReader.setRSTDocument(rstDocument);
+//	        xmlReader.setContentHandler(rstReader);
+//	        
+//	        //setting LexicalHandler to read DTD
+//	        xmlReader.setProperty("http://xml.org/sax/properties/lexical-handler", rstReader);
+//	        xmlReader.setContentHandler(rstReader);
+//	        
+//	        xmlReader.parse(rstFile.getAbsolutePath());
+//	        
+//	    } catch (ParserConfigurationException e) {
+//        	throw new RSTException("Cannot load exmaralda from resource '"+rstFile.getAbsolutePath()+"'.", e);
+//        } catch (SAXException e) {
+//        	throw new RSTException("Cannot load exmaralda from resource '"+rstFile.getAbsolutePath()+"'.", e);
+//		}
 	}
 }
