@@ -145,6 +145,16 @@
         </configuration>
       </plugin>
       <!-- end: for generating license headers in source files. Run mvn license:format -->
+      <!-- start: creates a NOTICE file use mvn notice:generate -->
+	  <plugin>
+        <groupId>org.jasig.maven</groupId>
+        <artifactId>maven-notice-plugin</artifactId>
+        <version>1.0.4</version>
+        <configuration>
+          <noticeTemplate>./src/etc/NOTICE_template.txt</noticeTemplate>
+        </configuration>
+      </plugin>
+      <!-- end: creates a NOTICE file use mvn notice:generate -->
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
