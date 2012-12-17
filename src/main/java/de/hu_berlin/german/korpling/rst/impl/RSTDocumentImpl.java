@@ -197,7 +197,7 @@ public class RSTDocumentImpl extends EObjectImpl implements RSTDocument {
 		{
 			for (Relation relation: this.getRelations())
 			{
-				if (relation.getParent().getId().equalsIgnoreCase(id))
+				if (relation.getChild().getId().equals(id))
 				{
 					if (retVal== null)
 						retVal= new BasicEList<Relation>();
@@ -222,7 +222,7 @@ public class RSTDocumentImpl extends EObjectImpl implements RSTDocument {
 		{
 			for (Relation relation: this.getRelations())
 			{
-				if (relation.getChild().getId().equalsIgnoreCase(id))
+				if (relation.getParent().getId().equals(id))
 				{
 					retVal= relation;
 					break;
@@ -246,7 +246,7 @@ public class RSTDocumentImpl extends EObjectImpl implements RSTDocument {
 		{
 			for (Relation relation: this.getRelations())
 			{
-				if (relation.getChild().getId().equalsIgnoreCase(id))
+				if (relation.getParent().getId().equals(id))
 				{
 					if (retVal== null)
 						retVal= new BasicEList<Relation>();

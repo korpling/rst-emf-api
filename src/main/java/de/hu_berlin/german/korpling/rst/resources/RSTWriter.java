@@ -18,7 +18,11 @@
 package de.hu_berlin.german.korpling.rst.resources;
 
 import java.io.FileOutputStream;
-import java.io.PrintStream;
+import java.io.OutputStreamWriter;
+import java.util.HashSet;
+
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamWriter;
 
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -28,139 +32,146 @@ import de.hu_berlin.german.korpling.rst.Group;
 import de.hu_berlin.german.korpling.rst.RSTDocument;
 import de.hu_berlin.german.korpling.rst.Relation;
 import de.hu_berlin.german.korpling.rst.Segment;
+import de.hu_berlin.german.korpling.rst.exceptions.RSTException;
 
 
 public class RSTWriter 
 {
 	/**
-	 * Encoding in which file has to be written
+	 * Sets encoding for output stream
 	 */
-	private String encoding= "UTF-8";
-	
-	/**
-	 * Stream in which the file content is written.
-	 */
-	PrintStream fileWriter= null;
+	public static final String encoding="UTF-8";
 	
 	/**
 	 * Stores a RST-model into a .rs3 file.
 	 */
-	public void write(RSTDocument rstDocument, URI uri) throws java.io.IOException
+	public void write(RSTDocument rstDocument, URI uri)
 	{
-		if (rstDocument!= null)
-		{	
-			this.fileWriter= new PrintStream(new FileOutputStream(uri.toFileString()), true, this.encoding);
-			try 
-			{
-				this.fileWriter.println("<rst>");
-				{//print header
-					this.fileWriter.println("<header>");
-					this.fileWriter.println("<encoding name=\""+this.encoding+"\" />");
-					{//relations
-						this.fileWriter.println("<relations>");
+		XMLOutputFactory xof= null;
+		XMLStreamWriter xmlWriter= null;
+		
+		try 
+		{
+			if (rstDocument!= null)
+			{	
+				//write doc1
+				xof = XMLOutputFactory.newInstance();
+		        xmlWriter = null;
+		        OutputStreamWriter outStream = new OutputStreamWriter(new FileOutputStream(uri.toFileString()), "UTF-8");  
+		        xmlWriter = xof.createXMLStreamWriter(outStream);
+		        xmlWriter.writeStartDocument(encoding, "1.0");
+		        
+	        
+				xmlWriter.writeStartElement(RSTVocabulary.TAG_RST);
+				//print header
+					xmlWriter.writeStartElement(RSTVocabulary.TAG_HEADER);
+					xmlWriter.writeStartElement(RSTVocabulary.TAG_ENCODING);
+					xmlWriter.writeAttribute(RSTVocabulary.ATT_NAME, encoding);
+					xmlWriter.writeEndElement();
+					//relations
+						xmlWriter.writeStartElement(RSTVocabulary.TAG_RELATIONS);
 						if (	(rstDocument.getRelations()!= null) &&
 								(rstDocument.getRelations().size()> 0))
 						{//compute header information for relations	(NOTE: just a heuristic and mostly incorrect)
-							this.fileWriter.println("<!-- attention: this is done by a heuristic and can not be precisly computed. -->");
-							EList<String> headerRelEntries= new BasicEList<String>();
+							HashSet<String> nameTypeHash= new HashSet<String>();
+							EList<String[]> headerRelEntries= new BasicEList<String[]>();
 							for (Relation relation: rstDocument.getRelations())
 							{
-								if (!headerRelEntries.contains(relation.getName()))
+								String[] nameType= new String[2];
+								nameType[0]= relation.getName();
+								nameType[1]= relation.getType();
+								if (!nameTypeHash.contains(nameType[0]))
 								{//if entry does not still exists create it
-									headerRelEntries.add(relation.getName());
+									nameTypeHash.add(nameType[0]);
+									headerRelEntries.add(nameType);
 								}//if entry does not still exists create it
 							}
-							for (String relationName: headerRelEntries)
+							
+							for (String[] bla: headerRelEntries)
+							{
+								System.out.println(bla[0]+" = "+bla[1]);
+							}
+							
+							for (String[] relationName: headerRelEntries)
 							{//write entries to header
-								this.fileWriter.println("<rel name=\""+relationName+"\" type=\"rst\" />");
-								this.fileWriter.println("<rel name=\""+relationName+"\" type=\"multinuc\" />");
+								xmlWriter.writeStartElement(RSTVocabulary.TAG_REL);
+								xmlWriter.writeAttribute(RSTVocabulary.ATT_NAME, relationName[0]);
+								if (relationName[1]!= null)
+									xmlWriter.writeAttribute(RSTVocabulary.ATT_TYPE, relationName[1]);
+								xmlWriter.writeEndElement();
 							}//write entries to header
 						}//compute header information for relations	(NOTE: just a heuristic and mostly incorrect)
-						this.fileWriter.println("</relations>");
-					}//relations
-					this.fileWriter.println("</header>");
-				}//print header
-				{//print header
-					this.fileWriter.println("<body>");
-					{//segments
+						xmlWriter.writeEndElement();
+					//relations
+					xmlWriter.writeEndElement();
+				//print header
+				//print header
+					xmlWriter.writeStartElement(RSTVocabulary.TAG_BODY);
+					//segments
 						if (rstDocument.getSegments()!= null)
 						{	
 							for (Segment segment: rstDocument.getSegments())
 							{
-								this.fileWriter.print("<segment id=\""+segment.getId()+"\"");
-								Relation outgoingRelation= rstDocument.getOutgoingRelation(segment.getId());
-								if (outgoingRelation!= null)
+								xmlWriter.writeStartElement(RSTVocabulary.TAG_SEGMENT);
+								xmlWriter.writeAttribute(RSTVocabulary.ATT_ID, segment.getId());
+								if (segment.getType()!= null)
+									xmlWriter.writeAttribute(RSTVocabulary.ATT_TYPE, segment.getType());
+								
+								EList<Relation> incomingRelations= rstDocument.getIncomingRelations(segment.getId());
+								if (incomingRelations!= null)
 								{
-									if (outgoingRelation.getParent()!= null)
-										this.fileWriter.print(" parent=\""+outgoingRelation.getParent().getId()+"\"");
-									if (outgoingRelation.getName()!= null)
-										this.fileWriter.print(" relname=\""+this.getXMLEscaping(outgoingRelation.getName())+"\"");
+									Relation incomingRelation= incomingRelations.get(0);
+									if (incomingRelation.getParent()!= null)
+										xmlWriter.writeAttribute(RSTVocabulary.ATT_PARENT, incomingRelation.getParent().getId());
+									if (incomingRelation.getName()!= null)
+										xmlWriter.writeAttribute(RSTVocabulary.ATT_RELNAME, incomingRelation.getName());
 								}
-								this.fileWriter.print(">");
-								this.fileWriter.print(this.getXMLEscaping(segment.getText()));
-								this.fileWriter.println("</segment>");
+								
+								xmlWriter.writeCharacters(segment.getText());
+								xmlWriter.writeEndElement();
 							}
 						}
-					}//segments
-					{//groups
+					//segments
+					//groups
 						if (rstDocument.getGroups()!= null)
 						{	
 							for (Group group: rstDocument.getGroups())
 							{
-								this.fileWriter.print("<group id=\""+group.getId()+"\" ");
-								
-								Relation outgoingRelation= rstDocument.getOutgoingRelation(group.getId());
-								if (outgoingRelation!= null)
+								xmlWriter.writeStartElement(RSTVocabulary.TAG_GROUP);
+								xmlWriter.writeAttribute(RSTVocabulary.ATT_ID, group.getId());
+								if (group.getType()!= null)
+									xmlWriter.writeAttribute(RSTVocabulary.ATT_TYPE, group.getType());
+																
+								EList<Relation> incomingRelations= rstDocument.getIncomingRelations(group.getId());
+								if (incomingRelations!= null)
 								{
-									if (outgoingRelation.getType()!= null)
-										this.fileWriter.print("type=\""+this.getXMLEscaping(outgoingRelation.getType())+"\" ");
-									if (outgoingRelation.getParent()!= null)
-										this.fileWriter.print("parent=\""+outgoingRelation.getParent().getId()+"\" ");
-									if (outgoingRelation.getName()!= null)
-										this.fileWriter.print("relname=\""+this.getXMLEscaping(outgoingRelation.getName())+"\" ");
+									Relation incomingRelation= incomingRelations.get(0);
+									if (incomingRelation.getParent()!= null)
+										xmlWriter.writeAttribute(RSTVocabulary.ATT_PARENT, incomingRelation.getParent().getId());
+									if (incomingRelation.getName()!= null)
+										xmlWriter.writeAttribute(RSTVocabulary.ATT_RELNAME, incomingRelation.getName());
 								}
-								this.fileWriter.println("/>");
+								xmlWriter.writeEndElement();
 							}
 						}
-					}//groups
-					this.fileWriter.println("</body>");
-				}//print header
-				this.fileWriter.println("</rst>");
-			} 
-			catch (RuntimeException e) {
-				e.printStackTrace();
-				throw e;
+					//end: group 
+					xmlWriter.writeEndElement();
+				//print header
+				xmlWriter.writeEndElement();
+				xmlWriter.writeEndDocument();
 			}
-			finally
-			{
-				fileWriter.flush();
-				fileWriter.close();
+		} 
+		catch (Exception e) {
+			throw new RSTException("Cannot store data to file '"+uri+"'. ", e);
+		}
+		finally
+		{
+			try{
+				xmlWriter.flush();
+		        xmlWriter.close();
+			}catch (Exception e) {
+				throw new RSTException("Cannot close stream '"+uri+"'. ", e);
 			}
 		}
-	}
-	
-	/**
-	 * Returns the given string with replaced escaping characters to the origin characters.
-	 * For example returns given template:  "a &lt; b" returns "a < b"
-	 * @param template
-	 * @return
-	 */
-	private String getXMLEscaping(String template)
-	{
-		String retStr=template;
-		retStr= retStr.replaceAll("&", "&amp;");
-		retStr= retStr.replaceAll("'", "&apos;");
-		retStr= retStr.replaceAll("<", "&lt;");
-		retStr= retStr.replaceAll(">", "&gt;");
-		retStr= retStr.replaceAll("\"", "&quot;");
-		
-		retStr= retStr.replaceAll("Ä", "&#196;");
-		retStr= retStr.replaceAll("Ö", "&#214;");
-		retStr= retStr.replaceAll("Ü", "&#220;");
-		retStr= retStr.replaceAll("ä", "&#228;");
-		retStr= retStr.replaceAll("ö", "&#246;");
-		retStr= retStr.replaceAll("ü", "&#252;");
-		retStr= retStr.replaceAll("ß", "&#223;");
-		return(retStr);
 	}
 }

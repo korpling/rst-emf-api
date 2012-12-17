@@ -36,6 +36,7 @@ import junit.textui.TestRunner;
  * <ul>
  *   <li>{@link de.hu_berlin.german.korpling.rst.RSTDocument#getIncomingRelations(java.lang.String) <em>Get Incoming Relations</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelation(java.lang.String) <em>Get Outgoing Relation</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelations(java.lang.String) <em>Get Outgoing Relations</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -144,29 +145,29 @@ public class RSTDocumentTest extends TestCase {
 		Relation rel= null;
 		
 		rel= RSTFactory.eINSTANCE.createRelation();
-		rel.setChild(sgmt2);
-		rel.setParent(sgmt1);
-		this.getFixture().getRelations().add(rel);
-		
-		rel= RSTFactory.eINSTANCE.createRelation();
+		rel.setParent(sgmt2);
 		rel.setChild(sgmt1);
-		rel.setParent(sgmt1);
 		this.getFixture().getRelations().add(rel);
 		
 		rel= RSTFactory.eINSTANCE.createRelation();
-		rel.setChild(sgmt2);
 		rel.setParent(sgmt1);
+		rel.setChild(sgmt1);
 		this.getFixture().getRelations().add(rel);
 		
 		rel= RSTFactory.eINSTANCE.createRelation();
-		rel.setChild(sgmt2);
 		rel.setParent(sgmt1);
+		rel.setChild(grp1);
 		this.getFixture().getRelations().add(rel);
 		
-		assertEquals(1, this.getFixture().getIncomingRelations(grp1_id));
-		assertEquals(1, this.getFixture().getIncomingRelations(grp2_id));
-		assertEquals(2, this.getFixture().getIncomingRelations(sgmt1_id));
-		assertEquals(0, this.getFixture().getIncomingRelations(sgmt2_id));
+		rel= RSTFactory.eINSTANCE.createRelation();
+		rel.setParent(sgmt1);
+		rel.setChild(grp2);
+		this.getFixture().getRelations().add(rel);
+		
+		assertEquals(1, this.getFixture().getIncomingRelations(grp1_id).size());
+		assertEquals(1, this.getFixture().getIncomingRelations(grp2_id).size());
+		assertEquals(2, this.getFixture().getIncomingRelations(sgmt1_id).size());
+		assertNull(this.getFixture().getIncomingRelations(sgmt2_id));
 	}
 
 	/**
@@ -176,8 +177,65 @@ public class RSTDocumentTest extends TestCase {
 	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelation(java.lang.String)
 	 */
 	public void testGetOutgoingRelation__String() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
+		
+	}
+
+	/**
+	 * Tests the '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelations(java.lang.String) <em>Get Outgoing Relations</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * sgmt2 -> sgmt1 
+	 * sgmt1 -> sgmt1
+	 * sgmt1 -> grp1
+	 * sgmt1 -> grp2
+	 * <!-- end-user-doc -->
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelations(java.lang.String)
+	 */
+	public void testGetOutgoingRelations__String() {
+		Group grp1= RSTFactory.eINSTANCE.createGroup();
+		String grp1_id="grp1";
+		grp1.setId(grp1_id);
+		Group grp2= RSTFactory.eINSTANCE.createGroup();
+		String grp2_id="grp2";
+		grp2.setId(grp2_id);
+		Segment sgmt1= RSTFactory.eINSTANCE.createSegment();
+		String sgmt1_id="sgmt1";
+		sgmt1.setId(sgmt1_id);
+		Segment sgmt2= RSTFactory.eINSTANCE.createSegment();
+		String sgmt2_id="sgmt2";
+		sgmt2.setId(sgmt2_id);
+		
+		assertNull(this.getFixture().getOutgoingRelations(grp1.getId()));
+		assertNull(this.getFixture().getOutgoingRelations(grp2.getId()));
+		assertNull(this.getFixture().getIncomingRelations(sgmt1.getId()));
+		assertNull(this.getFixture().getIncomingRelations(sgmt2.getId()));
+		
+		Relation rel= null;
+		
+		rel= RSTFactory.eINSTANCE.createRelation();
+		rel.setParent(sgmt2);
+		rel.setChild(sgmt1);
+		this.getFixture().getRelations().add(rel);
+		
+		rel= RSTFactory.eINSTANCE.createRelation();
+		rel.setParent(sgmt1);
+		rel.setChild(sgmt1);
+		this.getFixture().getRelations().add(rel);
+		
+		rel= RSTFactory.eINSTANCE.createRelation();
+		rel.setParent(sgmt1);
+		rel.setChild(grp1);
+		this.getFixture().getRelations().add(rel);
+		
+		rel= RSTFactory.eINSTANCE.createRelation();
+		rel.setParent(sgmt1);
+		rel.setChild(grp2);
+		this.getFixture().getRelations().add(rel);
+		
+		
+		assertNull(this.getFixture().getOutgoingRelations(grp1_id));
+		assertNull(this.getFixture().getOutgoingRelations(grp2_id));
+		assertEquals(3, this.getFixture().getOutgoingRelations(sgmt1_id).size());
+		assertEquals(1, this.getFixture().getOutgoingRelations(sgmt2_id).size());
 	}
 
 } //RSTDocumentTest

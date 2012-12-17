@@ -1,48 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rst>
-<header>
-<encoding name="UTF-8" />
-<relations>
-<!-- attention: this is done by a heuristic and can not be precisly computed. -->
-<rel name="konsequent" type="rst" />
-<rel name="konsequent" type="multinuc" />
-<rel name="span" type="rst" />
-<rel name="span" type="multinuc" />
-<rel name="additiv" type="rst" />
-<rel name="additiv" type="multinuc" />
-<rel name="komparativ" type="rst" />
-<rel name="komparativ" type="multinuc" />
-</relations>
-</header>
-<body>
-<segment id="1">﻿&amp;lt;RX-2006&amp;gt;&amp;lt;XQ-2&amp;gt;&amp;lt;BJ-1&amp;gt;&amp;lt;KC-ZB&amp;gt;&amp;lt;TY-DYTDX&amp;gt;&amp;lt;DF-18/20-80.5/100&amp;gt;
-Neben dem Studium Jobben?</segment>
-<segment id="13">
-
-Jetzt wollen immer mehr Studenten neben dem Studium jobben.</segment>
-<segment id="2" parent="14" relname="konsequent"> Manche von ihnen kommen aus einer armen Familie.</segment>
-<segment id="14" parent="22" relname="span"> F&#252;r sie sit der Job praktisch.</segment>
-<segment id="3" parent="23" relname="span"> Aber manche wollen nur mehr Geld,</segment>
-<segment id="15" parent="19" relname="span"> denn sie kaufen zu viel zu teure Sachen.</segment>
-<segment id="4" parent="15" relname="additiv"> Das ist zu schlecht.</segment>
-<segment id="5">
-
-Meiner Meinung nach jobben die Studenten neben dem Studium am liebsten nicht,</segment>
-<segment id="16" parent="5" relname="konsequent"> solange sie genug Geld haben.</segment>
-<segment id="6"> Zum Studieren haben wir nur so wenig Zeit,</segment>
-<segment id="17" parent="20" relname="span"> etwa 4 Jahren.</segment>
-<segment id="7" parent="17" relname="komparativ"> Den Rest des ganzen Lebens arbeiten wir.</segment>
-<segment id="8"> Wir m&#252;ssen uns w&#228;hrend dieser Zeit so flei&#223;ig wie m&#246;glich verbessern.</segment>
-<segment id="9" parent="21" relname="span"> Wir sollen lieber mehr lesen,</segment>
-<segment id="18" parent="9" relname="konsequent"> um uns zu bilden.</segment>
-<segment id="10" parent="8" relname="konsequent"> Nur so k&#246;nnen wir sp&#228;ter viel Geld verdienen.</segment>
-<segment id="11" parent="12" relname="additiv">
-
-Ehrlich gesagt bin ich gegen das Jobben neben dem Studium.</segment>
-<segment id="12"> Warum gehen wir nicht lernen?</segment>
-<group id="19" type="span" parent="3" relname="konsequent" />
-<group id="20" type="span" parent="6" relname="additiv" />
-<group id="21" type="span" parent="8" relname="additiv" />
-<group id="22" type="span" parent="3" relname="additiv" />
-<group id="23" type="span" parent="13" relname="additiv" />
-</body>
+  <header>
+    <encoding name="UTF-8"/>
+    <relations>
+      <rel name="conjunction" type="multinuc" />
+      <rel name="nonvolitional-result" type="rst" />
+      <rel name="span" />
+    </relations>
+  </header>
+  <body>
+    <segment id="1" parent="4" relname="conjunction">Jim went to Harvard,</segment>
+    <segment id="2" parent="4" relname="conjunction"> and John went to Yale.</segment>
+    <segment id="3" parent="4" relname="nonvolitional-result"> Therefore, both attended good schools.</segment>
+    <group id="4" type="multinuc" parent="5" relname="span" />
+    <group id="5" type="span" />
+  </body>
 </rst>

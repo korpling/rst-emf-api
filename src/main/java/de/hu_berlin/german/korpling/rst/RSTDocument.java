@@ -137,4 +137,12 @@ public interface RSTDocument extends EObject {
 	 */
 	Relation getOutgoingRelation(String id);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<Relation> getOutgoingRelations(String id);
+
 } // RSTDocument

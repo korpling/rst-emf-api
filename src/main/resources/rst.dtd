@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT rst (header,body)>
+<!ELEMENT header (relations)>
+<!ELEMENT relations (rel*)>
+<!ELEMENT rel EMPTY>
+<!ELEMENT body (segment*, group*)>
+<!ELEMENT segment (#PCDATA)>
+<!ELEMENT group EMPTY >
+<!ATTLIST rel
+    name CDATA #REQUIRED
+    type CDATA #REQUIRED>
+<!ATTLIST segment
+    id ID #REQUIRED
+    parent CDATA #IMPLIED
+    relname CDATA #IMPLIED>
+<!ATTLIST group
+    id CDATA #REQUIRED
+    type CDATA #REQUIRED
+    parent CDATA #IMPLIED
+    relname CDATA #IMPLIED>

@@ -36,6 +36,10 @@
         <element xmi:type="ecore:EOperation" href="rst.ecore#//RSTDocument/getIncomingRelations"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_wgl4gZwOEd-WevuHnDZBSQ"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_Q7XLYEhPEeKiMIrvzsIhEA" type="2002">
+        <element xmi:type="ecore:EOperation" href="rst.ecore#//RSTDocument/getOutgoingRelations"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Q7XLYUhPEeKiMIrvzsIhEA"/>
+      </children>
       <children xmi:type="notation:Node" xmi:id="_zSnUMJwOEd-WevuHnDZBSQ" type="2002">
         <element xmi:type="ecore:EOperation" href="rst.ecore#//RSTDocument/getOutgoingRelation"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_zSnUMZwOEd-WevuHnDZBSQ"/>
