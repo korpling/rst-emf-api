@@ -15,20 +15,20 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
+package de.hu_berlin.german.korpling.rst.tests;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
+import de.hu_berlin.german.korpling.rst.RSTFactory;
+import de.hu_berlin.german.korpling.rst.Segment;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test suite for the '<em><b>rst</b></em>' model.
+ * A test case for the model object '<em><b>Segment</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class rstAllTests extends TestSuite {
+public class SegmentTest extends AbstractNodeTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -36,27 +36,51 @@ public class rstAllTests extends TestSuite {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(suite());
+		TestRunner.run(SegmentTest.class);
 	}
 
 	/**
+	 * Constructs a new Segment test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Test suite() {
-		TestSuite suite = new rstAllTests("rst Tests");
-		suite.addTest(RSTTests.suite());
-		return suite;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public rstAllTests(String name) {
+	public SegmentTest(String name) {
 		super(name);
 	}
 
-} //rstAllTests
+	/**
+	 * Returns the fixture for this Segment test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected Segment getFixture() {
+		return (Segment)fixture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#setUp()
+	 * @generated
+	 */
+	@Override
+	protected void setUp() throws Exception {
+		setFixture(RSTFactory.eINSTANCE.createSegment());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#tearDown()
+	 * @generated
+	 */
+	@Override
+	protected void tearDown() throws Exception {
+		setFixture(null);
+	}
+	public void testAlibi()
+	{}
+} //SegmentTest

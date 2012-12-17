@@ -15,20 +15,30 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
+package de.hu_berlin.german.korpling.rst.tests;
 
 import de.hu_berlin.german.korpling.rst.RSTFactory;
-import de.hu_berlin.german.korpling.rst.Segment;
+import de.hu_berlin.german.korpling.rst.Relation;
+
+import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Segment</b></em>'.
+ * A test case for the model object '<em><b>Relation</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class SegmentTest extends AbstractNodeTest {
+public class RelationTest extends TestCase {
+
+	/**
+	 * The fixture for this Relation test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Relation fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -36,28 +46,37 @@ public class SegmentTest extends AbstractNodeTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(SegmentTest.class);
+		TestRunner.run(RelationTest.class);
 	}
 
 	/**
-	 * Constructs a new Segment test case with the given name.
+	 * Constructs a new Relation test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SegmentTest(String name) {
+	public RelationTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Segment test case.
+	 * Sets the fixture for this Relation test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected Segment getFixture() {
-		return (Segment)fixture;
+	protected void setFixture(Relation fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
+	 * Returns the fixture for this Relation test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Relation getFixture() {
+		return fixture;
 	}
 
 	/**
@@ -68,7 +87,7 @@ public class SegmentTest extends AbstractNodeTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(RSTFactory.eINSTANCE.createSegment());
+		setFixture(RSTFactory.eINSTANCE.createRelation());
 	}
 
 	/**
@@ -81,6 +100,7 @@ public class SegmentTest extends AbstractNodeTest {
 	protected void tearDown() throws Exception {
 		setFixture(null);
 	}
+
 	public void testAlibi()
 	{}
-} //SegmentTest
+} //RelationTest

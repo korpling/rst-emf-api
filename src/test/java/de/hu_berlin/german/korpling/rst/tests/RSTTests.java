@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
+package de.hu_berlin.german.korpling.rst.tests;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

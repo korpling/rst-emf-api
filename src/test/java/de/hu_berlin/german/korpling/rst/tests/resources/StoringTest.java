@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests.resources;
+package de.hu_berlin.german.korpling.rst.tests.resources;
 
 import java.io.File;
 import java.io.IOException;

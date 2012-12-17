@@ -15,56 +15,48 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
+package de.hu_berlin.german.korpling.rst.tests;
 
-import de.hu_berlin.german.korpling.rst.AbstractNode;
+import junit.framework.Test;
+import junit.framework.TestSuite;
 
-import junit.framework.TestCase;
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Abstract Node</b></em>'.
+ * A test suite for the '<em><b>rst</b></em>' model.
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class AbstractNodeTest extends TestCase {
+public class rstAllTests extends TestSuite {
 
 	/**
-	 * The fixture for this Abstract Node test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AbstractNode fixture = null;
+	public static void main(String[] args) {
+		TestRunner.run(suite());
+	}
 
 	/**
-	 * Constructs a new Abstract Node test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractNodeTest(String name) {
+	public static Test suite() {
+		TestSuite suite = new rstAllTests("rst Tests");
+		suite.addTest(RSTTests.suite());
+		return suite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public rstAllTests(String name) {
 		super(name);
 	}
 
-	/**
-	 * Sets the fixture for this Abstract Node test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(AbstractNode fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
-	 * Returns the fixture for this Abstract Node test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AbstractNode getFixture() {
-		return fixture;
-	}
-
-} //AbstractNodeTest
+} //rstAllTests

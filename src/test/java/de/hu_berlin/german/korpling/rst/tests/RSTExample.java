@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
+package de.hu_berlin.german.korpling.rst.tests;
 
 import de.hu_berlin.german.korpling.rst.RSTFactory;
 import de.hu_berlin.german.korpling.rst.RSTPackage;

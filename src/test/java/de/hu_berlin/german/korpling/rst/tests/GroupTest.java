@@ -15,30 +15,20 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
+package de.hu_berlin.german.korpling.rst.tests;
 
+import de.hu_berlin.german.korpling.rst.Group;
 import de.hu_berlin.german.korpling.rst.RSTFactory;
-import de.hu_berlin.german.korpling.rst.Relation;
-
-import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Relation</b></em>'.
+ * A test case for the model object '<em><b>Group</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class RelationTest extends TestCase {
-
-	/**
-	 * The fixture for this Relation test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Relation fixture = null;
+public class GroupTest extends AbstractNodeTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -46,37 +36,28 @@ public class RelationTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(RelationTest.class);
+		TestRunner.run(GroupTest.class);
 	}
 
 	/**
-	 * Constructs a new Relation test case with the given name.
+	 * Constructs a new Group test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RelationTest(String name) {
+	public GroupTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Sets the fixture for this Relation test case.
+	 * Returns the fixture for this Group test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(Relation fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
-	 * Returns the fixture for this Relation test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Relation getFixture() {
-		return fixture;
+	@Override
+	protected Group getFixture() {
+		return (Group)fixture;
 	}
 
 	/**
@@ -87,7 +68,7 @@ public class RelationTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(RSTFactory.eINSTANCE.createRelation());
+		setFixture(RSTFactory.eINSTANCE.createGroup());
 	}
 
 	/**
@@ -100,7 +81,8 @@ public class RelationTest extends TestCase {
 	protected void tearDown() throws Exception {
 		setFixture(null);
 	}
-
+	
 	public void testAlibi()
 	{}
-} //RelationTest
+
+} //GroupTest

@@ -15,74 +15,56 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
+package de.hu_berlin.german.korpling.rst.tests;
 
-import de.hu_berlin.german.korpling.rst.Group;
-import de.hu_berlin.german.korpling.rst.RSTFactory;
+import de.hu_berlin.german.korpling.rst.AbstractNode;
 
-import junit.textui.TestRunner;
+import junit.framework.TestCase;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Group</b></em>'.
+ * A test case for the model object '<em><b>Abstract Node</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class GroupTest extends AbstractNodeTest {
+public abstract class AbstractNodeTest extends TestCase {
 
 	/**
+	 * The fixture for this Abstract Node test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static void main(String[] args) {
-		TestRunner.run(GroupTest.class);
-	}
+	protected AbstractNode fixture = null;
 
 	/**
-	 * Constructs a new Group test case with the given name.
+	 * Constructs a new Abstract Node test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GroupTest(String name) {
+	public AbstractNodeTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Group test case.
+	 * Sets the fixture for this Abstract Node test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected Group getFixture() {
-		return (Group)fixture;
+	protected void setFixture(AbstractNode fixture) {
+		this.fixture = fixture;
 	}
 
 	/**
+	 * Returns the fixture for this Abstract Node test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
-	@Override
-	protected void setUp() throws Exception {
-		setFixture(RSTFactory.eINSTANCE.createGroup());
+	protected AbstractNode getFixture() {
+		return fixture;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
-	@Override
-	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
-	
-	public void testAlibi()
-	{}
-
-} //GroupTest
+} //AbstractNodeTest
