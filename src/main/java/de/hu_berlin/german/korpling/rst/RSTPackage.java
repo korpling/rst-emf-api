@@ -90,13 +90,22 @@ public interface RSTPackage extends EPackage {
 	int ABSTRACT_NODE__ID = 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_NODE__TYPE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_NODE_FEATURE_COUNT = 1;
+	int ABSTRACT_NODE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl <em>Segment</em>}' class.
@@ -116,6 +125,15 @@ public interface RSTPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEGMENT__ID = ABSTRACT_NODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__TYPE = ABSTRACT_NODE__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Document</b></em>' container reference.
@@ -237,13 +255,13 @@ public interface RSTPackage extends EPackage {
 	int RELATION__PARENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * The feature id for the '<em><b>Child</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__SOURCE = 3;
+	int RELATION__CHILD = 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -281,6 +299,15 @@ public interface RSTPackage extends EPackage {
 	 * @ordered
 	 */
 	int GROUP__ID = ABSTRACT_NODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__TYPE = ABSTRACT_NODE__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Document</b></em>' container reference.
@@ -431,15 +458,15 @@ public interface RSTPackage extends EPackage {
 	EReference getRelation_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.hu_berlin.german.korpling.rst.Relation#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see de.hu_berlin.german.korpling.rst.Relation#getSource()
+	 * @return the meta object for the reference '<em>Child</em>'.
+	 * @see de.hu_berlin.german.korpling.rst.Relation#getChild()
 	 * @see #getRelation()
 	 * @generated
 	 */
-	EReference getRelation_Source();
+	EReference getRelation_Child();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}'.
@@ -493,6 +520,17 @@ public interface RSTPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAbstractNode_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.AbstractNode#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see de.hu_berlin.german.korpling.rst.AbstractNode#getType()
+	 * @see #getAbstractNode()
+	 * @generated
+	 */
+	EAttribute getAbstractNode_Type();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -619,12 +657,12 @@ public interface RSTPackage extends EPackage {
 		EReference RELATION__PARENT = eINSTANCE.getRelation_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Child</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RELATION__SOURCE = eINSTANCE.getRelation_Source();
+		EReference RELATION__CHILD = eINSTANCE.getRelation_Child();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -669,6 +707,14 @@ public interface RSTPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ABSTRACT_NODE__ID = eINSTANCE.getAbstractNode_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_NODE__TYPE = eINSTANCE.getAbstractNode_Type();
 
 	}
 

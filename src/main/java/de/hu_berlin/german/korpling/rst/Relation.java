@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getDocuments <em>Documents</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getParent <em>Parent</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getSource <em>Source</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -121,30 +121,30 @@ public interface Relation extends EObject {
 	void setParent(AbstractNode value);
 
 	/**
-	 * Returns the value of the '<em><b>Source</b></em>' reference.
+	 * Returns the value of the '<em><b>Child</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Source</em>' reference isn't clear,
+	 * If the meaning of the '<em>Child</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(AbstractNode)
-	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getRelation_Source()
+	 * @return the value of the '<em>Child</em>' reference.
+	 * @see #setChild(AbstractNode)
+	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getRelation_Child()
 	 * @model
 	 * @generated
 	 */
-	AbstractNode getSource();
+	AbstractNode getChild();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Relation#getSource <em>Source</em>}' reference.
+	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source</em>' reference.
-	 * @see #getSource()
+	 * @param value the new value of the '<em>Child</em>' reference.
+	 * @see #getChild()
 	 * @generated
 	 */
-	void setSource(AbstractNode value);
+	void setChild(AbstractNode value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

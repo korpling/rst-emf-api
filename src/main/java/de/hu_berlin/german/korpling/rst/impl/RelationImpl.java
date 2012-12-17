@@ -43,7 +43,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getDocuments <em>Documents</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getChild <em>Child</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -82,14 +82,14 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	protected AbstractNode parent;
 
 	/**
-	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+	 * The cached value of the '{@link #getChild() <em>Child</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSource()
+	 * @see #getChild()
 	 * @generated
 	 * @ordered
 	 */
-	protected AbstractNode source;
+	protected AbstractNode child;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -235,16 +235,16 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractNode getSource() {
-		if (source != null && source.eIsProxy()) {
-			InternalEObject oldSource = (InternalEObject)source;
-			source = (AbstractNode)eResolveProxy(oldSource);
-			if (source != oldSource) {
+	public AbstractNode getChild() {
+		if (child != null && child.eIsProxy()) {
+			InternalEObject oldChild = (InternalEObject)child;
+			child = (AbstractNode)eResolveProxy(oldChild);
+			if (child != oldChild) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSTPackage.RELATION__SOURCE, oldSource, source));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSTPackage.RELATION__CHILD, oldChild, child));
 			}
 		}
-		return source;
+		return child;
 	}
 
 	/**
@@ -252,8 +252,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractNode basicGetSource() {
-		return source;
+	public AbstractNode basicGetChild() {
+		return child;
 	}
 
 	/**
@@ -261,11 +261,11 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(AbstractNode newSource) {
-		AbstractNode oldSource = source;
-		source = newSource;
+	public void setChild(AbstractNode newChild) {
+		AbstractNode oldChild = child;
+		child = newChild;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RSTPackage.RELATION__SOURCE, oldSource, source));
+			eNotify(new ENotificationImpl(this, Notification.SET, RSTPackage.RELATION__CHILD, oldChild, child));
 	}
 
 	/**
@@ -348,9 +348,9 @@ public class RelationImpl extends EObjectImpl implements Relation {
 			case RSTPackage.RELATION__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
-			case RSTPackage.RELATION__SOURCE:
-				if (resolve) return getSource();
-				return basicGetSource();
+			case RSTPackage.RELATION__CHILD:
+				if (resolve) return getChild();
+				return basicGetChild();
 			case RSTPackage.RELATION__TYPE:
 				return getType();
 		}
@@ -374,8 +374,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 			case RSTPackage.RELATION__PARENT:
 				setParent((AbstractNode)newValue);
 				return;
-			case RSTPackage.RELATION__SOURCE:
-				setSource((AbstractNode)newValue);
+			case RSTPackage.RELATION__CHILD:
+				setChild((AbstractNode)newValue);
 				return;
 			case RSTPackage.RELATION__TYPE:
 				setType((String)newValue);
@@ -401,8 +401,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 			case RSTPackage.RELATION__PARENT:
 				setParent((AbstractNode)null);
 				return;
-			case RSTPackage.RELATION__SOURCE:
-				setSource((AbstractNode)null);
+			case RSTPackage.RELATION__CHILD:
+				setChild((AbstractNode)null);
 				return;
 			case RSTPackage.RELATION__TYPE:
 				setType(TYPE_EDEFAULT);
@@ -425,8 +425,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 				return getDocuments() != null;
 			case RSTPackage.RELATION__PARENT:
 				return parent != null;
-			case RSTPackage.RELATION__SOURCE:
-				return source != null;
+			case RSTPackage.RELATION__CHILD:
+				return child != null;
 			case RSTPackage.RELATION__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
@@ -442,8 +442,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer();
-		if (this.getSource()!= null)
-			result.append(this.getSource().getId());
+		if (this.getChild()!= null)
+			result.append(this.getChild().getId());
 		else 
 			result.append("unknown");
 		result.append("-->");

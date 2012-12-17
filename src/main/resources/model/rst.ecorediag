@@ -95,6 +95,10 @@
         <element xmi:type="ecore:EAttribute" href="rst.ecore#//AbstractNode/id"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Y2DToZv_Ed-WevuHnDZBSQ"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_JBXRoUhBEeKiMIrvzsIhEA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="rst.ecore#//AbstractNode/type"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JBXRokhBEeKiMIrvzsIhEA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_Xni5IZv_Ed-WevuHnDZBSQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_Xni5Ipv_Ed-WevuHnDZBSQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Xni5I5v_Ed-WevuHnDZBSQ"/>
@@ -229,7 +233,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_dB8sUZv_Ed-WevuHnDZBSQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_dB8sUpv_Ed-WevuHnDZBSQ" fontColor="4210752" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="rst.ecore#//Relation/source"/>
+    <element xmi:type="ecore:EReference" href="rst.ecore#//Relation/child"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dB8sU5v_Ed-WevuHnDZBSQ" points="[-44, 24, 250, -134]$[-292, 179, 2, 21]"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dCCy9Jv_Ed-WevuHnDZBSQ" id="(0.9411764705882353,0.5714285714285714)"/>
   </edges>

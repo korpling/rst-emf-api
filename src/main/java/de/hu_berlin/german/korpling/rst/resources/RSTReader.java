@@ -211,7 +211,7 @@ public class RSTReader extends DefaultHandler2
 				if (attributes.getValue("parent")!= null)
 				{
 					Relation relation= RSTFactory.eINSTANCE.createRelation();
-					relation.setSource(segment);
+					relation.setChild(segment);
 					this.getRSTDocument().getRelations().add(relation);
 					if (attributes.getValue("relname")!= null)
 						relation.setName(attributes.getValue("relname"));
@@ -250,7 +250,7 @@ public class RSTReader extends DefaultHandler2
 				{
 					Relation relation= RSTFactory.eINSTANCE.createRelation();
 					this.getRSTDocument().getRelations().add(relation);
-					relation.setSource(group);
+					relation.setChild(group);
 					if (attributes.getValue("relname")!= null)
 						relation.setName(attributes.getValue("relname"));
 					if (attributes.getValue("type")!= null)

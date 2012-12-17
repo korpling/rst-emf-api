@@ -249,7 +249,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRelation_Source() {
+	public EReference getRelation_Child() {
 		return (EReference)relationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -303,6 +303,15 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAbstractNode_Type() {
+		return (EAttribute)abstractNodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public RSTFactory getRSTFactory() {
 		return (RSTFactory)getEFactoryInstance();
 	}
@@ -340,7 +349,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 		createEAttribute(relationEClass, RELATION__NAME);
 		createEReference(relationEClass, RELATION__DOCUMENTS);
 		createEReference(relationEClass, RELATION__PARENT);
-		createEReference(relationEClass, RELATION__SOURCE);
+		createEReference(relationEClass, RELATION__CHILD);
 		createEAttribute(relationEClass, RELATION__TYPE);
 
 		groupEClass = createEClass(GROUP);
@@ -348,6 +357,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 
 		abstractNodeEClass = createEClass(ABSTRACT_NODE);
 		createEAttribute(abstractNodeEClass, ABSTRACT_NODE__ID);
+		createEAttribute(abstractNodeEClass, ABSTRACT_NODE__TYPE);
 	}
 
 	/**
@@ -402,7 +412,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 		initEAttribute(getRelation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_Documents(), this.getRSTDocument(), this.getRSTDocument_Relations(), "documents", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_Parent(), this.getAbstractNode(), null, "parent", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelation_Source(), this.getAbstractNode(), null, "source", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelation_Child(), this.getAbstractNode(), null, "child", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelation_Type(), ecorePackage.getEString(), "type", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -410,6 +420,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 
 		initEClass(abstractNodeEClass, AbstractNode.class, "AbstractNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractNode_Id(), ecorePackage.getEString(), "id", null, 0, 1, AbstractNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractNode_Type(), ecorePackage.getEString(), "type", null, 0, 1, AbstractNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
