@@ -113,12 +113,10 @@ public class RSTDocumentTest extends TestCase {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getIncomingRelations(java.lang.String)
-	 * @generated
 	 */
 	public void testGetIncomingRelations__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
-		
 	}
 
 	/**
@@ -126,12 +124,10 @@ public class RSTDocumentTest extends TestCase {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelation(java.lang.String)
-	 * @generated
 	 */
 	public void testGetOutgoingRelation__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
-		
 	}
 
 } //RSTDocumentTest
