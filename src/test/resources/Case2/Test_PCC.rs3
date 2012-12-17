@@ -1,27 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rst>
 <header>
-<encoding name="UTF-8" />
+<encoding name="UTF-8"/>
 <relations>
-<!-- attention: this is done by a heuristic and can not be precisly computed. -->
-<rel name="span" type="rst" />
 <rel name="span" type="multinuc" />
-<rel name="elaboration" type="rst" />
 <rel name="elaboration" type="multinuc" />
-<rel name="joint" type="rst" />
 <rel name="joint" type="multinuc" />
-<rel name="concession" type="rst" />
 <rel name="concession" type="multinuc" />
-<rel name="evaluation" type="rst" />
 <rel name="evaluation" type="multinuc" />
-<rel name="list" type="rst" />
 <rel name="list" type="multinuc" />
-<rel name="nonvolitional-result" type="rst" />
 <rel name="nonvolitional-result" type="multinuc" />
-<rel name="background" type="rst" />
 <rel name="background" type="multinuc" />
-<rel name="nonvolitional-cause" type="rst" />
 <rel name="nonvolitional-cause" type="multinuc" />
-<rel name="circumstance" type="rst" />
 <rel name="circumstance" type="multinuc" />
 </relations>
 </header>

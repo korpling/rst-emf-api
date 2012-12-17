@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
-  <artifactId>misc-RSTModel</artifactId>
+  <groupId>de.hu_berlin.german.korpling</groupId>
+    <artifactId>rst-api</artifactId>
   <version>0.0.2-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <description>Model for RST</description>  
@@ -21,7 +21,7 @@
     <notice.file>${basedir}/NOTICE</notice.file>
   </properties>
   <scm>
-    <developerConnection>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/Misc/RSTModel/trunk</developerConnection>
+    <developerConnection>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/models/rst-api/trunk</developerConnection>
   </scm>
 <distributionManagement>
     <repository>
@@ -63,6 +63,12 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+	<groupId>xmlunit</groupId>
+		<artifactId>xmlunit</artifactId>
+		<version>1.3</version>
+		<scope>test</scope>
+	</dependency>
+    <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.16</version>
@@ -100,7 +106,7 @@
         <version>2.1</version>
         <configuration>
           <tagBase>
-           https://korpling.german.hu-berlin.de/svn/saltnpepper/Misc/TreetaggerModel/tags/
+           https://korpling.german.hu-berlin.de/svn/saltnpepper/models/rst-api/tags/
           </tagBase>
           <releaseProfiles>release</releaseProfiles>
           <goals>package assembly:single deploy</goals>
@@ -125,7 +131,7 @@
             <descriptor>${assemblies.name}</descriptor>
           </descriptors>
           <appendAssemblyId>false</appendAssemblyId>
-          <finalName>${project.groupId}.misc.${project.artifactId}_${project.version}</finalName>
+          <finalName>${project.groupId}.${project.artifactId}_${project.version}</finalName>
           <outputDirectory>target/distribution</outputDirectory>
           <workDirectory>target/assembly/work</workDirectory>
         </configuration>
@@ -177,7 +183,7 @@
             <Bundle-SymbolicName>${project.groupId}.${project.artifactId};singleton:=true</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
             <Bundle-RequiredExecutionEnvironment>JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
-            <Export-Package>de.hu_berlin.german.korpling.saltnpepper.misc.rst, de.hu_berlin.german.korpling.saltnpepper.misc.rst.resources, de.hu_berlin.german.korpling.saltnpepper.misc.rst.exceptions</Export-Package>
+            <Export-Package>de.hu_berlin.german.korpling.rst, de.hu_berlin.german.korpling.rst.resources, de.hu_berlin.german.korpling.rst.exceptions</Export-Package>
             <Include-Resource>{maven-resources}, LICENSE, NOTICE</Include-Resource>
           </instructions>
         </configuration>
