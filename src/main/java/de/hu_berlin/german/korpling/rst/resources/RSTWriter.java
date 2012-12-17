@@ -17,11 +17,14 @@
  */
 package de.hu_berlin.german.korpling.rst.resources;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.HashSet;
 
 import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 
 import org.eclipse.emf.common.util.BasicEList;
@@ -85,11 +88,6 @@ public class RSTWriter
 									nameTypeHash.add(nameType[0]);
 									headerRelEntries.add(nameType);
 								}//if entry does not still exists create it
-							}
-							
-							for (String[] bla: headerRelEntries)
-							{
-								System.out.println(bla[0]+" = "+bla[1]);
 							}
 							
 							for (String[] relationName: headerRelEntries)
@@ -161,7 +159,13 @@ public class RSTWriter
 				xmlWriter.writeEndDocument();
 			}
 		} 
-		catch (Exception e) {
+		catch (XMLStreamException e) {
+			throw new RSTException("Cannot store data to file '"+uri+"'. ", e);
+		}
+		catch (UnsupportedEncodingException e) {
+			throw new RSTException("Cannot store data to file '"+uri+"'. ", e);
+		}
+		catch (FileNotFoundException e) {
 			throw new RSTException("Cannot store data to file '"+uri+"'. ", e);
 		}
 		finally
