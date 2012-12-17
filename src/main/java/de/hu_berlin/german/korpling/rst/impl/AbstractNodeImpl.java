@@ -15,10 +15,10 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl;
+package de.hu_berlin.german.korpling.rst.impl;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage;
+import de.hu_berlin.german.korpling.rst.AbstractNode;
+import de.hu_berlin.german.korpling.rst.RSTPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.AbstractNodeImpl#getId <em>Id</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *

@@ -17,8 +17,8 @@
  */
 package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTFactory;
+import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.RSTFactory;
 
 import junit.framework.TestCase;
 
@@ -31,8 +31,8 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getIncomingRelations(java.lang.String) <em>Get Incoming Relations</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getOutgoingRelation(java.lang.String) <em>Get Outgoing Relation</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.RSTDocument#getIncomingRelations(java.lang.String) <em>Get Incoming Relations</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelation(java.lang.String) <em>Get Outgoing Relation</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -109,10 +109,10 @@ public class RSTDocumentTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getIncomingRelations(java.lang.String) <em>Get Incoming Relations</em>}' operation.
+	 * Tests the '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getIncomingRelations(java.lang.String) <em>Get Incoming Relations</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getIncomingRelations(java.lang.String)
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getIncomingRelations(java.lang.String)
 	 * @generated
 	 */
 	public void testGetIncomingRelations__String() {
@@ -122,10 +122,10 @@ public class RSTDocumentTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getOutgoingRelation(java.lang.String) <em>Get Outgoing Relation</em>}' operation.
+	 * Tests the '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelation(java.lang.String) <em>Get Outgoing Relation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getOutgoingRelation(java.lang.String)
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelation(java.lang.String)
 	 * @generated
 	 */
 	public void testGetOutgoingRelation__String() {

@@ -15,9 +15,9 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.util;
+package de.hu_berlin.german.korpling.rst.util;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.*;
+import de.hu_berlin.german.korpling.rst.*;
 
 import java.util.List;
 
@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage
+ * @see de.hu_berlin.german.korpling.rst.RSTPackage
  * @generated
  */
 public class RSTSwitch<T> {

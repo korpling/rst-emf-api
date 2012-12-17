@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst;
+package de.hu_berlin.german.korpling.rst;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -27,11 +27,11 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode#getId <em>Id</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.AbstractNode#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage#getAbstractNode()
+ * @see de.hu_berlin.german.korpling.rst.RSTPackage#getAbstractNode()
  * @model abstract="true"
  * @generated
  */
@@ -46,14 +46,14 @@ public interface AbstractNode extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage#getAbstractNode_Id()
+	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getAbstractNode_Id()
 	 * @model
 	 * @generated
 	 */
 	String getId();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.AbstractNode#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.

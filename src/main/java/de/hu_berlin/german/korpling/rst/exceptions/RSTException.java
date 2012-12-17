@@ -15,19 +15,21 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.resources;
+package de.hu_berlin.german.korpling.rst.exceptions;
 
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
-
-
-public class RSTResourceFactory extends ResourceFactoryImpl 
+public class RSTException extends java.lang.RuntimeException
 {
-	public Resource createResource(URI uri)
-	{
-		Resource resource=new RSTResource();
-		resource.setURI(uri);
-		return(resource);
-	}
+	/**
+	 * generated serialVersionUID
+	 */
+	private static final long serialVersionUID = 7152733137673679658L;
+
+	public RSTException()
+	{ super(); }
+	
+    public RSTException(String s)
+    { super(s); }
+    
+	public RSTException(String s, Throwable ex)
+	{super(s, ex); }
 }

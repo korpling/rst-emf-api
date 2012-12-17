@@ -15,15 +15,15 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl;
+package de.hu_berlin.german.korpling.rst.impl;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTFactory;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment;
+import de.hu_berlin.german.korpling.rst.AbstractNode;
+import de.hu_berlin.german.korpling.rst.Group;
+import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.RSTFactory;
+import de.hu_berlin.german.korpling.rst.RSTPackage;
+import de.hu_berlin.german.korpling.rst.Relation;
+import de.hu_berlin.german.korpling.rst.Segment;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -86,7 +86,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage#eNS_URI
+	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */

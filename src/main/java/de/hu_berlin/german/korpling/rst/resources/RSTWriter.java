@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.resources;
+package de.hu_berlin.german.korpling.rst.resources;
 
 import java.io.FileOutputStream;
 import java.io.PrintStream;
@@ -24,10 +24,10 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment;
+import de.hu_berlin.german.korpling.rst.Group;
+import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.Relation;
+import de.hu_berlin.german.korpling.rst.Segment;
 
 
 public class RSTWriter 

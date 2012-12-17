@@ -15,9 +15,9 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl;
+package de.hu_berlin.german.korpling.rst.impl;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.*;
+import de.hu_berlin.german.korpling.rst.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;

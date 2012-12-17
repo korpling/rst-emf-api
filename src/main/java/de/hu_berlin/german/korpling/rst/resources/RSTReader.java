@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.resources;
+package de.hu_berlin.german.korpling.rst.resources;
 
 
 import java.io.File;
@@ -27,13 +27,13 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.ext.DefaultHandler2;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTFactory;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.exceptions.RSTException;
+import de.hu_berlin.german.korpling.rst.AbstractNode;
+import de.hu_berlin.german.korpling.rst.Group;
+import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.RSTFactory;
+import de.hu_berlin.german.korpling.rst.Relation;
+import de.hu_berlin.german.korpling.rst.Segment;
+import de.hu_berlin.german.korpling.rst.exceptions.RSTException;
 
 public class RSTReader extends DefaultHandler2 
 {

@@ -15,9 +15,9 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.util;
+package de.hu_berlin.german.korpling.rst.util;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.*;
+import de.hu_berlin.german.korpling.rst.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage
+ * @see de.hu_berlin.german.korpling.rst.RSTPackage
  * @generated
  */
 public class RSTAdapterFactory extends AdapterFactoryImpl {
@@ -123,13 +123,13 @@ public class RSTAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment <em>Segment</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.rst.Segment <em>Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment
+	 * @see de.hu_berlin.german.korpling.rst.Segment
 	 * @generated
 	 */
 	public Adapter createSegmentAdapter() {
@@ -137,13 +137,13 @@ public class RSTAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument <em>Document</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.rst.RSTDocument <em>Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument
 	 * @generated
 	 */
 	public Adapter createRSTDocumentAdapter() {
@@ -151,13 +151,13 @@ public class RSTAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation <em>Relation</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.rst.Relation <em>Relation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation
+	 * @see de.hu_berlin.german.korpling.rst.Relation
 	 * @generated
 	 */
 	public Adapter createRelationAdapter() {
@@ -165,13 +165,13 @@ public class RSTAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group <em>Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.rst.Group <em>Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group
+	 * @see de.hu_berlin.german.korpling.rst.Group
 	 * @generated
 	 */
 	public Adapter createGroupAdapter() {
@@ -179,13 +179,13 @@ public class RSTAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode <em>Abstract Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.hu_berlin.german.korpling.rst.AbstractNode <em>Abstract Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode
+	 * @see de.hu_berlin.german.korpling.rst.AbstractNode
 	 * @generated
 	 */
 	public Adapter createAbstractNodeAdapter() {

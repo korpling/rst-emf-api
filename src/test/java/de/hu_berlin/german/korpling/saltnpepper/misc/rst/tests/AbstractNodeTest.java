@@ -17,7 +17,7 @@
  */
 package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode;
+import de.hu_berlin.german.korpling.rst.AbstractNode;
 
 import junit.framework.TestCase;
 

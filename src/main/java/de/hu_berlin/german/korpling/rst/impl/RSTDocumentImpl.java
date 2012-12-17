@@ -15,13 +15,13 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl;
+package de.hu_berlin.german.korpling.rst.impl;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment;
+import de.hu_berlin.german.korpling.rst.Group;
+import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.RSTPackage;
+import de.hu_berlin.german.korpling.rst.Relation;
+import de.hu_berlin.german.korpling.rst.Segment;
 
 import java.util.Collection;
 
@@ -47,10 +47,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTDocumentImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTDocumentImpl#getSegments <em>Segments</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTDocumentImpl#getGroups <em>Groups</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTDocumentImpl#getRelations <em>Relations</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl#getSegments <em>Segments</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl#getGroups <em>Groups</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl#getRelations <em>Relations</em>}</li>
  * </ul>
  * </p>
  *

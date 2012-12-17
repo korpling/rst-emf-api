@@ -17,8 +17,8 @@
  */
 package de.hu_berlin.german.korpling.saltnpepper.misc.rst.tests;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTFactory;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment;
+import de.hu_berlin.german.korpling.rst.RSTFactory;
+import de.hu_berlin.german.korpling.rst.Segment;
 
 import junit.textui.TestRunner;
 

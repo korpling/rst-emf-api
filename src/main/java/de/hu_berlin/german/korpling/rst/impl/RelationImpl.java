@@ -15,12 +15,12 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl;
+package de.hu_berlin.german.korpling.rst.impl;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation;
+import de.hu_berlin.german.korpling.rst.AbstractNode;
+import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.RSTPackage;
+import de.hu_berlin.german.korpling.rst.Relation;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -40,11 +40,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RelationImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RelationImpl#getDocuments <em>Documents</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RelationImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RelationImpl#getSource <em>Source</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RelationImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getDocuments <em>Documents</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *

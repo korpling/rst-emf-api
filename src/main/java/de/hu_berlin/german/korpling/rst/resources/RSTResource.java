@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst.resources;
+package de.hu_berlin.german.korpling.rst.resources;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,9 +33,9 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTFactory;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.exceptions.RSTException;
+import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.RSTFactory;
+import de.hu_berlin.german.korpling.rst.exceptions.RSTException;
 
 public class RSTResource extends ResourceImpl
 {	

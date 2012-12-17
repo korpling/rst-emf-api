@@ -28,9 +28,9 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.exceptions.RSTException;
-import de.hu_berlin.german.korpling.saltnpepper.misc.rst.resources.RSTResourceFactory;
+import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.exceptions.RSTException;
+import de.hu_berlin.german.korpling.rst.resources.RSTResourceFactory;
 
 public class StoringTest extends TestCase 
 {

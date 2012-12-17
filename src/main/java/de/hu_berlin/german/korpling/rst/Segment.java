@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst;
+package de.hu_berlin.german.korpling.rst;
 
 
 /**
@@ -26,19 +26,19 @@ package de.hu_berlin.german.korpling.saltnpepper.misc.rst;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment#getDocument <em>Document</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment#getText <em>Text</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.Segment#getDocument <em>Document</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.Segment#getText <em>Text</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage#getSegment()
+ * @see de.hu_berlin.german.korpling.rst.RSTPackage#getSegment()
  * @model
  * @generated
  */
 public interface Segment extends AbstractNode {
 	/**
 	 * Returns the value of the '<em><b>Document</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getSegments <em>Segments</em>}'.
+	 * It is bidirectional and its opposite is '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getSegments <em>Segments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Document</em>' container reference isn't clear,
@@ -47,15 +47,15 @@ public interface Segment extends AbstractNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Document</em>' container reference.
 	 * @see #setDocument(RSTDocument)
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage#getSegment_Document()
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getSegments
+	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getSegment_Document()
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getSegments
 	 * @model opposite="segments" transient="false"
 	 * @generated
 	 */
 	RSTDocument getDocument();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment#getDocument <em>Document</em>}' container reference.
+	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Segment#getDocument <em>Document</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Document</em>' container reference.
@@ -74,14 +74,14 @@ public interface Segment extends AbstractNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see #setText(String)
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage#getSegment_Text()
+	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getSegment_Text()
 	 * @model
 	 * @generated
 	 */
 	String getText();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment#getText <em>Text</em>}' attribute.
+	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Segment#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Text</em>' attribute.

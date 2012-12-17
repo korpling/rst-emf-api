@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst;
+package de.hu_berlin.german.korpling.rst;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTFactory
+ * @see de.hu_berlin.german.korpling.rst.RSTFactory
  * @model kind="package"
  * @generated
  */
@@ -68,14 +68,14 @@ public interface RSTPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	RSTPackage eINSTANCE = de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl.init();
+	RSTPackage eINSTANCE = de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.AbstractNodeImpl <em>Abstract Node</em>}' class.
+	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl <em>Abstract Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.AbstractNodeImpl
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getAbstractNode()
+	 * @see de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl
+	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getAbstractNode()
 	 * @generated
 	 */
 	int ABSTRACT_NODE = 4;
@@ -99,11 +99,11 @@ public interface RSTPackage extends EPackage {
 	int ABSTRACT_NODE_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.SegmentImpl <em>Segment</em>}' class.
+	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl <em>Segment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.SegmentImpl
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getSegment()
+	 * @see de.hu_berlin.german.korpling.rst.impl.SegmentImpl
+	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getSegment()
 	 * @generated
 	 */
 	int SEGMENT = 0;
@@ -145,11 +145,11 @@ public interface RSTPackage extends EPackage {
 	int SEGMENT_FEATURE_COUNT = ABSTRACT_NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTDocumentImpl <em>Document</em>}' class.
+	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl <em>Document</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTDocumentImpl
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getRSTDocument()
+	 * @see de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl
+	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getRSTDocument()
 	 * @generated
 	 */
 	int RST_DOCUMENT = 1;
@@ -200,11 +200,11 @@ public interface RSTPackage extends EPackage {
 	int RST_DOCUMENT_FEATURE_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RelationImpl <em>Relation</em>}' class.
+	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl <em>Relation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RelationImpl
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getRelation()
+	 * @see de.hu_berlin.german.korpling.rst.impl.RelationImpl
+	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getRelation()
 	 * @generated
 	 */
 	int RELATION = 2;
@@ -264,11 +264,11 @@ public interface RSTPackage extends EPackage {
 	int RELATION_FEATURE_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.GroupImpl <em>Group</em>}' class.
+	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.GroupImpl <em>Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.GroupImpl
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getGroup()
+	 * @see de.hu_berlin.german.korpling.rst.impl.GroupImpl
+	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getGroup()
 	 * @generated
 	 */
 	int GROUP = 3;
@@ -302,193 +302,193 @@ public interface RSTPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment <em>Segment</em>}'.
+	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.Segment <em>Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Segment</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment
+	 * @see de.hu_berlin.german.korpling.rst.Segment
 	 * @generated
 	 */
 	EClass getSegment();
 
 	/**
-	 * Returns the meta object for the container reference '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment#getDocument <em>Document</em>}'.
+	 * Returns the meta object for the container reference '{@link de.hu_berlin.german.korpling.rst.Segment#getDocument <em>Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Document</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment#getDocument()
+	 * @see de.hu_berlin.german.korpling.rst.Segment#getDocument()
 	 * @see #getSegment()
 	 * @generated
 	 */
 	EReference getSegment_Document();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment#getText <em>Text</em>}'.
+	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.Segment#getText <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Segment#getText()
+	 * @see de.hu_berlin.german.korpling.rst.Segment#getText()
 	 * @see #getSegment()
 	 * @generated
 	 */
 	EAttribute getSegment_Text();
 
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument <em>Document</em>}'.
+	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.RSTDocument <em>Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Document</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument
 	 * @generated
 	 */
 	EClass getRSTDocument();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getName()
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getName()
 	 * @see #getRSTDocument()
 	 * @generated
 	 */
 	EAttribute getRSTDocument_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getSegments <em>Segments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getSegments <em>Segments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Segments</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getSegments()
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getSegments()
 	 * @see #getRSTDocument()
 	 * @generated
 	 */
 	EReference getRSTDocument_Segments();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getGroups <em>Groups</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getGroups <em>Groups</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Groups</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getGroups()
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getGroups()
 	 * @see #getRSTDocument()
 	 * @generated
 	 */
 	EReference getRSTDocument_Groups();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getRelations <em>Relations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getRelations <em>Relations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Relations</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTDocument#getRelations()
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getRelations()
 	 * @see #getRSTDocument()
 	 * @generated
 	 */
 	EReference getRSTDocument_Relations();
 
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation <em>Relation</em>}'.
+	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.Relation <em>Relation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Relation</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation
+	 * @see de.hu_berlin.german.korpling.rst.Relation
 	 * @generated
 	 */
 	EClass getRelation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getName()
+	 * @see de.hu_berlin.german.korpling.rst.Relation#getName()
 	 * @see #getRelation()
 	 * @generated
 	 */
 	EAttribute getRelation_Name();
 
 	/**
-	 * Returns the meta object for the container reference '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getDocuments <em>Documents</em>}'.
+	 * Returns the meta object for the container reference '{@link de.hu_berlin.german.korpling.rst.Relation#getDocuments <em>Documents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Documents</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getDocuments()
+	 * @see de.hu_berlin.german.korpling.rst.Relation#getDocuments()
 	 * @see #getRelation()
 	 * @generated
 	 */
 	EReference getRelation_Documents();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the reference '{@link de.hu_berlin.german.korpling.rst.Relation#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Parent</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getParent()
+	 * @see de.hu_berlin.german.korpling.rst.Relation#getParent()
 	 * @see #getRelation()
 	 * @generated
 	 */
 	EReference getRelation_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link de.hu_berlin.german.korpling.rst.Relation#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getSource()
+	 * @see de.hu_berlin.german.korpling.rst.Relation#getSource()
 	 * @see #getRelation()
 	 * @generated
 	 */
 	EReference getRelation_Source();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Relation#getType()
+	 * @see de.hu_berlin.german.korpling.rst.Relation#getType()
 	 * @see #getRelation()
 	 * @generated
 	 */
 	EAttribute getRelation_Type();
 
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group <em>Group</em>}'.
+	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.Group <em>Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Group</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group
+	 * @see de.hu_berlin.german.korpling.rst.Group
 	 * @generated
 	 */
 	EClass getGroup();
 
 	/**
-	 * Returns the meta object for the container reference '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group#getDocument <em>Document</em>}'.
+	 * Returns the meta object for the container reference '{@link de.hu_berlin.german.korpling.rst.Group#getDocument <em>Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Document</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.Group#getDocument()
+	 * @see de.hu_berlin.german.korpling.rst.Group#getDocument()
 	 * @see #getGroup()
 	 * @generated
 	 */
 	EReference getGroup_Document();
 
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode <em>Abstract Node</em>}'.
+	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.AbstractNode <em>Abstract Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Node</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode
+	 * @see de.hu_berlin.german.korpling.rst.AbstractNode
 	 * @generated
 	 */
 	EClass getAbstractNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.AbstractNode#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.AbstractNode#getId()
+	 * @see de.hu_berlin.german.korpling.rst.AbstractNode#getId()
 	 * @see #getAbstractNode()
 	 * @generated
 	 */
@@ -517,11 +517,11 @@ public interface RSTPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.SegmentImpl <em>Segment</em>}' class.
+		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl <em>Segment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.SegmentImpl
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getSegment()
+		 * @see de.hu_berlin.german.korpling.rst.impl.SegmentImpl
+		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getSegment()
 		 * @generated
 		 */
 		EClass SEGMENT = eINSTANCE.getSegment();
@@ -543,11 +543,11 @@ public interface RSTPackage extends EPackage {
 		EAttribute SEGMENT__TEXT = eINSTANCE.getSegment_Text();
 
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTDocumentImpl <em>Document</em>}' class.
+		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl <em>Document</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTDocumentImpl
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getRSTDocument()
+		 * @see de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl
+		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getRSTDocument()
 		 * @generated
 		 */
 		EClass RST_DOCUMENT = eINSTANCE.getRSTDocument();
@@ -585,11 +585,11 @@ public interface RSTPackage extends EPackage {
 		EReference RST_DOCUMENT__RELATIONS = eINSTANCE.getRSTDocument_Relations();
 
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RelationImpl <em>Relation</em>}' class.
+		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl <em>Relation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RelationImpl
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getRelation()
+		 * @see de.hu_berlin.german.korpling.rst.impl.RelationImpl
+		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getRelation()
 		 * @generated
 		 */
 		EClass RELATION = eINSTANCE.getRelation();
@@ -635,11 +635,11 @@ public interface RSTPackage extends EPackage {
 		EAttribute RELATION__TYPE = eINSTANCE.getRelation_Type();
 
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.GroupImpl <em>Group</em>}' class.
+		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.GroupImpl <em>Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.GroupImpl
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getGroup()
+		 * @see de.hu_berlin.german.korpling.rst.impl.GroupImpl
+		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getGroup()
 		 * @generated
 		 */
 		EClass GROUP = eINSTANCE.getGroup();
@@ -653,11 +653,11 @@ public interface RSTPackage extends EPackage {
 		EReference GROUP__DOCUMENT = eINSTANCE.getGroup_Document();
 
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.AbstractNodeImpl <em>Abstract Node</em>}' class.
+		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl <em>Abstract Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.AbstractNodeImpl
-		 * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTPackageImpl#getAbstractNode()
+		 * @see de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl
+		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getAbstractNode()
 		 * @generated
 		 */
 		EClass ABSTRACT_NODE = eINSTANCE.getAbstractNode();

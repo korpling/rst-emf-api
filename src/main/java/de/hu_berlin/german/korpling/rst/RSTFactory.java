@@ -15,7 +15,7 @@
  *
  *
  */
-package de.hu_berlin.german.korpling.saltnpepper.misc.rst;
+package de.hu_berlin.german.korpling.rst;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see de.hu_berlin.german.korpling.saltnpepper.misc.rst.RSTPackage
+ * @see de.hu_berlin.german.korpling.rst.RSTPackage
  * @generated
  */
 public interface RSTFactory extends EFactory {
@@ -34,7 +34,7 @@ public interface RSTFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	RSTFactory eINSTANCE = de.hu_berlin.german.korpling.saltnpepper.misc.rst.impl.RSTFactoryImpl.init();
+	RSTFactory eINSTANCE = de.hu_berlin.german.korpling.rst.impl.RSTFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Segment</em>'.
