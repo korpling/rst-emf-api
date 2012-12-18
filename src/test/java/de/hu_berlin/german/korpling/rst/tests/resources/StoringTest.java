@@ -19,24 +19,31 @@ package de.hu_berlin.german.korpling.rst.tests.resources;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import junit.framework.TestCase;
 
+import org.custommonkey.xmlunit.DetailedDiff;
+import org.custommonkey.xmlunit.Diff;
+import org.custommonkey.xmlunit.XMLTestCase;
+import org.custommonkey.xmlunit.XMLUnit;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
 import de.hu_berlin.german.korpling.rst.RSTDocument;
 import de.hu_berlin.german.korpling.rst.exceptions.RSTException;
 import de.hu_berlin.german.korpling.rst.resources.RSTResourceFactory;
 
-public class StoringTest extends TestCase 
+public class StoringTest extends XMLTestCase
 {
 	private void loadSaveCompare(	String inputFileStr, 
 									String outputFileStr,
-									String expectedFileStr) throws IOException
+									String expectedFileStr) throws IOException, SAXException
 	{
 		File inputFile= new File(inputFileStr);
 		if (!inputFile.exists())
@@ -66,24 +73,39 @@ public class StoringTest extends TestCase
 			resourceOut.save(null);
 		}//save file
 		
-		FileComparator comparer= new FileComparator();
-		assertTrue("Both files has to be the same ('"+expectedFileStr+"/ '"+outputFile+"'')", comparer.compareFiles(new File(expectedFileStr), outputFile));
+		try {
+			InputSource source= new InputSource(expectedFileStr);
+			InputSource target= new InputSource(outputFile.getAbsolutePath());
+			
+			XMLUnit.setIgnoreWhitespace(true);
+			DetailedDiff myDiff = new DetailedDiff(compareXML(source, target));
+		    List allDifferences = myDiff.getAllDifferences();
+		    assertEquals(myDiff.toString(), 0, allDifferences.size());
+			
+		} catch (SAXException e) {
+			throw new RSTException("Cannot compare files '"+expectedFileStr+"' with '"+outputFile.getAbsolutePath()+"'.", e);
+		}
 	}
 	
-	public void testLoadSave1() throws IOException
+	private String getTMP()
+	{
+		return(System.getProperty("java.io.tmpdir")+"rst_api");
+	}
+	
+	public void testLoadSave1() throws IOException, SAXException
 	{
 		String inputFile= "./src/test/resources/Case1/TestFile.rs3";
 		String expectedFile= "./src/test/resources/Case1/TestFile.rs3";
-		String outputFile= "./_TMP/TestFile.rs3";
+		String outputFile= this.getTMP()+"/TestFile.rs3";
 		
 		this.loadSaveCompare(inputFile, outputFile, expectedFile);
 	}
 	
-	public void testLoadSave2() throws IOException
+	public void testLoadSave2() throws IOException, SAXException
 	{
 		String inputFile= "./src/test/resources/Case2/Test_PCC.rs3";
 		String expectedFile= "./src/test/resources/Case2/Test_PCC.rs3";
-		String outputFile= "./_TMP/Test_PCC.rs3";
+		String outputFile= this.getTMP()+"/Test_PCC.rs3";
 		
 		this.loadSaveCompare(inputFile, outputFile, expectedFile);
 	}

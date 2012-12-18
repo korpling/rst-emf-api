@@ -50,7 +50,6 @@ public class RSTExample {
 	 * Load all the argument file paths or URIs as instances of the model.
 	 * <!-- end-user-doc -->
 	 * @param args the file paths or URIs.
-	 * @generated
 	 */
 	public static void main(String[] args) {
 		// Create a resource set to hold the resources.
@@ -72,7 +71,6 @@ public class RSTExample {
 		// If there are no arguments, emit an appropriate usage message.
 		//
 		if (args.length == 0) {
-			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.rst"));
 				Segment root = RSTFactory.eINSTANCE.createSegment();
@@ -98,8 +96,7 @@ public class RSTExample {
 					// Demand load resource for this file.
 					//
 					Resource resource = resourceSet.getResource(uri, true);
-					System.out.println("Loaded " + uri);
-
+	
 					// Validate the contents of the loaded resource.
 					//
 					for (EObject eObject : resource.getContents()) {
@@ -110,7 +107,6 @@ public class RSTExample {
 					}
 				}
 				catch (RuntimeException exception) {
-					System.out.println("Problem loading " + uri);
 					exception.printStackTrace();
 				}
 			}
@@ -123,11 +119,8 @@ public class RSTExample {
 	 * <!-- end-user-doc -->
 	 * @param diagnostic the diagnostic to print.
 	 * @param indent the indentation for printing.
-	 * @generated
 	 */
 	protected static void printDiagnostic(Diagnostic diagnostic, String indent) {
-		System.out.print(indent);
-		System.out.println(diagnostic.getMessage());
 		for (Diagnostic child : diagnostic.getChildren()) {
 			printDiagnostic(child, indent + "  ");
 		}
