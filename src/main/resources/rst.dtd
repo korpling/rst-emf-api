@@ -10,7 +10,7 @@
     name CDATA #REQUIRED
     type CDATA #REQUIRED>
 <!ATTLIST segment
-    id ID #REQUIRED
+    id CDATA #REQUIRED
     parent CDATA #IMPLIED
     relname CDATA #IMPLIED>
 <!ATTLIST group
