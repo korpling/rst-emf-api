@@ -442,13 +442,13 @@ public class RelationImpl extends EObjectImpl implements Relation {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer();
-		if (this.getChild()!= null)
-			result.append(this.getChild().getId());
+		if (this.getParent()!= null)
+			result.append(this.getParent().getId());
 		else 
 			result.append("unknown");
 		result.append("-->");
-		if (this.getParent()!= null)
-			result.append(this.getParent().getId());
+		if (this.getChild()!= null)
+			result.append(this.getChild().getId());
 		else 
 			result.append("unknown");
 		result.append(" (name: ");
