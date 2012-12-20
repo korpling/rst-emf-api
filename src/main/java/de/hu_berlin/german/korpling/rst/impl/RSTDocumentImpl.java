@@ -17,8 +17,10 @@
  */
 package de.hu_berlin.german.korpling.rst.impl;
 
+import de.hu_berlin.german.korpling.rst.AbstractNode;
 import de.hu_berlin.german.korpling.rst.Group;
 import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.RSTFactory;
 import de.hu_berlin.german.korpling.rst.RSTPackage;
 import de.hu_berlin.german.korpling.rst.Relation;
 import de.hu_berlin.german.korpling.rst.Segment;
@@ -255,6 +257,21 @@ public class RSTDocumentImpl extends EObjectImpl implements RSTDocument {
 			}
 		}
 		return(retVal);
+	}
+	
+	
+
+	/**
+	 * {@inheritDoc RSTDocument#createRelation(AbstractNode, AbstractNode, String, String)}
+	 */
+	public Relation createRelation(AbstractNode parent, AbstractNode child, String name, String type) {
+		Relation rel= RSTFactory.eINSTANCE.createRelation();
+		rel.setParent(parent);
+		rel.setChild(child);
+		rel.setName(name);
+		rel.setType(type);
+		this.getRelations().add(rel);
+		return(rel);
 	}
 
 	/**

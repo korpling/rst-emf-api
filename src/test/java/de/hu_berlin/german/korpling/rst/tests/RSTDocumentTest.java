@@ -17,6 +17,7 @@
  */
 package de.hu_berlin.german.korpling.rst.tests;
 
+import de.hu_berlin.german.korpling.rst.AbstractNode;
 import de.hu_berlin.german.korpling.rst.Group;
 import de.hu_berlin.german.korpling.rst.RSTDocument;
 import de.hu_berlin.german.korpling.rst.RSTFactory;
@@ -37,6 +38,7 @@ import junit.textui.TestRunner;
  *   <li>{@link de.hu_berlin.german.korpling.rst.RSTDocument#getIncomingRelations(java.lang.String) <em>Get Incoming Relations</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelation(java.lang.String) <em>Get Outgoing Relation</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.RSTDocument#getOutgoingRelations(java.lang.String) <em>Get Outgoing Relations</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.RSTDocument#createRelation(de.hu_berlin.german.korpling.rst.AbstractNode, de.hu_berlin.german.korpling.rst.AbstractNode, java.lang.String, java.lang.String) <em>Create Relation</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -238,4 +240,29 @@ public class RSTDocumentTest extends TestCase {
 		assertEquals(1, this.getFixture().getOutgoingRelations(sgmt2_id).size());
 	}
 
+	/**
+	 * Tests the '{@link de.hu_berlin.german.korpling.rst.RSTDocument#createRelation(de.hu_berlin.german.korpling.rst.AbstractNode, de.hu_berlin.german.korpling.rst.AbstractNode, java.lang.String, java.lang.String) <em>Create Relation</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#createRelation(de.hu_berlin.german.korpling.rst.AbstractNode, de.hu_berlin.german.korpling.rst.AbstractNode, java.lang.String, java.lang.String)
+	 */
+	public void testCreateRelation__AbstractNode_AbstractNode_String_String() {
+		Group grp1= RSTFactory.eINSTANCE.createGroup();
+		Group grp2= RSTFactory.eINSTANCE.createGroup();
+		String name= "name";
+		String type= "type";
+		
+		this.getFixture().createRelation(grp1, grp2, name, type);
+		
+		assertNotNull(this.getFixture().getRelations());
+		assertEquals(1, this.getFixture().getRelations().size());
+		assertNotNull(this.getFixture().getRelations().get(0));
+		
+		assertEquals(grp1, this.getFixture().getRelations().get(0).getParent());
+		assertEquals(grp2, this.getFixture().getRelations().get(0).getChild());
+		assertEquals(name, this.getFixture().getRelations().get(0).getName());
+		assertEquals(type, this.getFixture().getRelations().get(0).getType());
+	}
+
 } //RSTDocumentTest
+

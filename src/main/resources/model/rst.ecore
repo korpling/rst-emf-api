@@ -18,6 +18,15 @@
     <eOperations name="getOutgoingRelations" upperBound="-1" eType="#//Relation">
       <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
+    <eOperations name="createRelation" eType="#//Relation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Creates a {@link Relation} object, sets its parent, child, name and type value to the given ones and adds the created relation to this {@link RSTDocument} object.&#xD;&#xA;@return returns the created object"/>
+      </eAnnotations>
+      <eParameters name="parent" eType="#//AbstractNode"/>
+      <eParameters name="child" eType="#//AbstractNode"/>
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="segments" upperBound="-1"
         eType="#//Segment" containment="true" eOpposite="#//Segment/document"/>

@@ -40,10 +40,10 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getDocuments <em>Documents</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getChild <em>Child</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -51,26 +51,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class RelationImpl extends EObjectImpl implements Relation {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -90,6 +70,26 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	 * @ordered
 	 */
 	protected AbstractNode child;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -341,8 +341,6 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RSTPackage.RELATION__NAME:
-				return getName();
 			case RSTPackage.RELATION__DOCUMENTS:
 				return getDocuments();
 			case RSTPackage.RELATION__PARENT:
@@ -351,6 +349,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 			case RSTPackage.RELATION__CHILD:
 				if (resolve) return getChild();
 				return basicGetChild();
+			case RSTPackage.RELATION__NAME:
+				return getName();
 			case RSTPackage.RELATION__TYPE:
 				return getType();
 		}
@@ -365,9 +365,6 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RSTPackage.RELATION__NAME:
-				setName((String)newValue);
-				return;
 			case RSTPackage.RELATION__DOCUMENTS:
 				setDocuments((RSTDocument)newValue);
 				return;
@@ -376,6 +373,9 @@ public class RelationImpl extends EObjectImpl implements Relation {
 				return;
 			case RSTPackage.RELATION__CHILD:
 				setChild((AbstractNode)newValue);
+				return;
+			case RSTPackage.RELATION__NAME:
+				setName((String)newValue);
 				return;
 			case RSTPackage.RELATION__TYPE:
 				setType((String)newValue);
@@ -392,9 +392,6 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RSTPackage.RELATION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case RSTPackage.RELATION__DOCUMENTS:
 				setDocuments((RSTDocument)null);
 				return;
@@ -403,6 +400,9 @@ public class RelationImpl extends EObjectImpl implements Relation {
 				return;
 			case RSTPackage.RELATION__CHILD:
 				setChild((AbstractNode)null);
+				return;
+			case RSTPackage.RELATION__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case RSTPackage.RELATION__TYPE:
 				setType(TYPE_EDEFAULT);
@@ -419,14 +419,14 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RSTPackage.RELATION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case RSTPackage.RELATION__DOCUMENTS:
 				return getDocuments() != null;
 			case RSTPackage.RELATION__PARENT:
 				return parent != null;
 			case RSTPackage.RELATION__CHILD:
 				return child != null;
+			case RSTPackage.RELATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case RSTPackage.RELATION__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}

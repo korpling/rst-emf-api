@@ -32,6 +32,10 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_XuCYJ5v-Ed-WevuHnDZBSQ"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_XuCYKJv-Ed-WevuHnDZBSQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_yrXnkErTEeKiMIrvzsIhEA" type="2002">
+        <element xmi:type="ecore:EOperation" href="rst.ecore#//RSTDocument/createRelation"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yrXnkUrTEeKiMIrvzsIhEA"/>
+      </children>
       <children xmi:type="notation:Node" xmi:id="_wgl4gJwOEd-WevuHnDZBSQ" type="2002">
         <element xmi:type="ecore:EOperation" href="rst.ecore#//RSTDocument/getIncomingRelations"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_wgl4gZwOEd-WevuHnDZBSQ"/>

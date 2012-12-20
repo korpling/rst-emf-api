@@ -27,10 +27,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getDocuments <em>Documents</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getParent <em>Parent</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}</li>
+ *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}</li>
  *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}</li>
  * </ul>
  * </p>

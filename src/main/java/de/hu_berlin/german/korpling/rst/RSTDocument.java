@@ -145,4 +145,16 @@ public interface RSTDocument extends EObject {
 	 */
 	EList<Relation> getOutgoingRelations(String id);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Creates a {@link Relation} object, sets its parent, child, name and type value to the given ones and adds the created relation to this {@link RSTDocument} object.
+	 * @return returns the created object
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Relation createRelation(AbstractNode parent, AbstractNode child, String name, String type);
+
 } // RSTDocument

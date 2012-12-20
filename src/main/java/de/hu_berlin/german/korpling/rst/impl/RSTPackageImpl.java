@@ -223,7 +223,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 	 * @generated
 	 */
 	public EAttribute getRelation_Name() {
-		return (EAttribute)relationEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)relationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -232,7 +232,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 	 * @generated
 	 */
 	public EReference getRelation_Documents() {
-		return (EReference)relationEClass.getEStructuralFeatures().get(1);
+		return (EReference)relationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -241,7 +241,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 	 * @generated
 	 */
 	public EReference getRelation_Parent() {
-		return (EReference)relationEClass.getEStructuralFeatures().get(2);
+		return (EReference)relationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -250,7 +250,7 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 	 * @generated
 	 */
 	public EReference getRelation_Child() {
-		return (EReference)relationEClass.getEStructuralFeatures().get(3);
+		return (EReference)relationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -346,10 +346,10 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 		createEReference(rstDocumentEClass, RST_DOCUMENT__RELATIONS);
 
 		relationEClass = createEClass(RELATION);
-		createEAttribute(relationEClass, RELATION__NAME);
 		createEReference(relationEClass, RELATION__DOCUMENTS);
 		createEReference(relationEClass, RELATION__PARENT);
 		createEReference(relationEClass, RELATION__CHILD);
+		createEAttribute(relationEClass, RELATION__NAME);
 		createEAttribute(relationEClass, RELATION__TYPE);
 
 		groupEClass = createEClass(GROUP);
@@ -411,11 +411,17 @@ public class RSTPackageImpl extends EPackageImpl implements RSTPackage {
 		op = addEOperation(rstDocumentEClass, this.getRelation(), "getOutgoingRelations", 0, -1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "id", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		op = addEOperation(rstDocumentEClass, this.getRelation(), "createRelation", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractNode(), "parent", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractNode(), "child", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "name", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "type", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(relationEClass, Relation.class, "Relation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRelation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_Documents(), this.getRSTDocument(), this.getRSTDocument_Relations(), "documents", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_Parent(), this.getAbstractNode(), null, "parent", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_Child(), this.getAbstractNode(), null, "child", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelation_Type(), ecorePackage.getEString(), "type", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

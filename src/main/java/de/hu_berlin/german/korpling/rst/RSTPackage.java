@@ -228,22 +228,13 @@ public interface RSTPackage extends EPackage {
 	int RELATION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATION__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Documents</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__DOCUMENTS = 1;
+	int RELATION__DOCUMENTS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -252,7 +243,7 @@ public interface RSTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__PARENT = 2;
+	int RELATION__PARENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Child</b></em>' reference.
@@ -261,7 +252,16 @@ public interface RSTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__CHILD = 3;
+	int RELATION__CHILD = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__NAME = 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
