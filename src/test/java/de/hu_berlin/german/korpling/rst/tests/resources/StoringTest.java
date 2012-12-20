@@ -21,10 +21,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import junit.framework.TestCase;
-
 import org.custommonkey.xmlunit.DetailedDiff;
-import org.custommonkey.xmlunit.Diff;
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.custommonkey.xmlunit.XMLUnit;
 import org.eclipse.emf.common.util.URI;
@@ -89,7 +86,7 @@ public class StoringTest extends XMLTestCase
 	
 	private String getTMP()
 	{
-		return(System.getProperty("java.io.tmpdir")+"rst_api");
+		return(System.getProperty("java.io.tmpdir")+"/rst_api");
 	}
 	
 	public void testLoadSave1() throws IOException, SAXException
