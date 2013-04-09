@@ -228,9 +228,9 @@ public class RSTReader extends DefaultHandler2
 					}
 					AbstractNode parent= this.idAbstractNodeTable.get(attributes.getValue(RSTVocabulary.ATT_PARENT));
 					if (parent== null)
-					{//parent does not exists so far
+					{//parent does not exist so far
 						this.addRelation2Table(attributes.getValue(RSTVocabulary.ATT_PARENT), relation);
-					}//parent does not exists so far
+					}//parent does not exist so far
 					else
 					{//parent already exists
 						relation.setParent(parent);
@@ -276,9 +276,9 @@ public class RSTReader extends DefaultHandler2
 					
 					AbstractNode parent= this.idAbstractNodeTable.get(attributes.getValue(RSTVocabulary.ATT_PARENT));
 					if (parent== null)
-					{//parent does not exists so far
+					{//parent does not exist so far
 						this.addRelation2Table(attributes.getValue(RSTVocabulary.ATT_PARENT), relation);
-					}//parent does not exists so far
+					}//parent does not exist so far
 					else
 					{//parent already exists
 						relation.setParent(parent);

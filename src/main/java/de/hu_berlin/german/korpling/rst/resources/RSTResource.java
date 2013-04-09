@@ -65,7 +65,7 @@ public class RSTResource extends ResourceImpl
 		
 		File rstFile= new File(this.getURI().toFileString());
 		if (!rstFile.exists()) 
-			throw new RSTException("Cannot load resource, because the file does not exists: " + rstFile);
+			throw new RSTException("Cannot load resource, because the file does not exist: " + rstFile);
 		
 		if (!rstFile.canRead())
 			throw new RSTException("Cannot load resource, because the file can not be read: " + rstFile);
