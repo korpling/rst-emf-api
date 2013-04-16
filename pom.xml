@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.hu_berlin.german.korpling</groupId>
     <artifactId>rst-api</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <description>Model for RST</description>
     <licenses>
@@ -21,7 +21,7 @@
         <notice.file>${basedir}/NOTICE</notice.file>
     </properties>
     <scm>
-        <developerConnection>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/models/rst-api/tags/rst-api-1.0.0</developerConnection>
+        <developerConnection>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/models/rst-api/trunk</developerConnection>
     </scm>
     <distributionManagement>
         <repository>
