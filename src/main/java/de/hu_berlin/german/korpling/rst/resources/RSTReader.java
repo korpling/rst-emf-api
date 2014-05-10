@@ -17,7 +17,6 @@
  */
 package de.hu_berlin.german.korpling.rst.resources;
 
-
 import java.io.File;
 import java.util.HashMap;
 import java.util.Stack;
@@ -35,26 +34,26 @@ import de.hu_berlin.german.korpling.rst.Relation;
 import de.hu_berlin.german.korpling.rst.Segment;
 import de.hu_berlin.german.korpling.rst.exceptions.RSTException;
 
-public class RSTReader extends DefaultHandler2 
-{
-	public RSTReader()
-	{
+public class RSTReader extends DefaultHandler2 {
+	public RSTReader() {
 		this.init();
 	}
-	
-	private void init()
-	{
-		this.idAbstractNodeTable= new HashMap<String, AbstractNode>();
-		this.idRelationTable= new HashMap<String, Vector<Relation>>();
-		this.rstElementStack= new Stack<RSTReader.RSTElements>();
-		this.relNameType= new HashMap<String, String>();
+
+	private void init() {
+		this.idAbstractNodeTable = new HashMap<String, AbstractNode>();
+		this.idRelationTable = new HashMap<String, Vector<Relation>>();
+		this.rstElementStack = new Stack<RSTReader.RSTElements>();
+		this.relNameType = new HashMap<String, String>();
 	}
-	
-//========================= start: RSTFile	
-	private File rstFile= null;
+
+	// ========================= start: RSTFile
+	private File rstFile = null;
+
 	/**
 	 * Sets the file from which the RST Reader actually reads from.
-	 * @param rstFile the rstFile to set
+	 * 
+	 * @param rstFile
+	 *            the rstFile to set
 	 */
 	public void setRstFile(File rstFile) {
 		this.rstFile = rstFile;
@@ -62,14 +61,17 @@ public class RSTReader extends DefaultHandler2
 
 	/**
 	 * Returns the file from which the RST Reader actually reads from.
+	 * 
 	 * @return the rstFile
 	 */
 	public File getRstFile() {
 		return rstFile;
 	}
-//========================= end: RSTFile
-//========================= start: RSTDocument	
-	private RSTDocument rstDocument= null;
+
+	// ========================= end: RSTFile
+	// ========================= start: RSTDocument
+	private RSTDocument rstDocument = null;
+
 	public void setRSTDocument(RSTDocument rstDocument) {
 		this.rstDocument = rstDocument;
 	}
@@ -77,77 +79,81 @@ public class RSTReader extends DefaultHandler2
 	public RSTDocument getRSTDocument() {
 		return rstDocument;
 	}
-//========================= end: RSTDocument	
+
+	// ========================= end: RSTDocument
 	/**
 	 * XML-element types for RST
 	 */
-	public enum RSTElements {RST, HEADER, ENCODING, RELATIONS, REL, BODY, SEGMENT, GROUP};
-	
+	public enum RSTElements {
+		RST, HEADER, ENCODING, RELATIONS, REL, BODY, SEGMENT, GROUP
+	};
+
 	/**
 	 * Stores the last read RST-XML-Elements
 	 */
-	private Stack<RSTElements> rstElementStack= null; 
-    
-    /**
-     * stores the read text inside an <segment> element
-     */
-    private StringBuffer currentText= null;
-    
-    /**
-     * Stores correspondation between relation name and relation type, given in the header
-     */
-    private HashMap<String, String> relNameType= null;
-    /**
+	private Stack<RSTElements> rstElementStack = null;
+
+	/**
+	 * stores the read text inside an <segment> element
+	 */
+	private StringBuffer currentText = null;
+
+	/**
+	 * Stores correspondation between relation name and relation type, given in
+	 * the header
+	 */
+	private HashMap<String, String> relNameType = null;
+
+	/**
 	 * @see org.xml.sax.helpers.DefaultHandler#characters(char[], int, int)
 	 */
-	public void characters(	char[] ch,
-            				int start,
-            				int length) throws SAXException
-    {
-		if (this.rstElementStack.peek().equals(RSTElements.SEGMENT))
-		{//current element is <segment/>
-			if (this.currentSegment== null)
-				throw new RSTException("Cannot add the found text node in file '"+this.getRstFile().getAbsolutePath()+"', because it is not contained in a <segment>-element.");
-			if (this.currentText== null)
-				this.currentText= new StringBuffer();
-			for (int i= start; i< start+length; i++)
-			{//creating the text
-				if (ch[i]!= '\n')
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		if (this.rstElementStack.peek().equals(RSTElements.SEGMENT)) {// current
+																		// element
+																		// is
+																		// <segment/>
+			if (this.currentSegment == null)
+				throw new RSTException("Cannot add the found text node in file '" + this.getRstFile().getAbsolutePath() + "', because it is not contained in a <segment>-element.");
+			if (this.currentText == null)
+				this.currentText = new StringBuffer();
+			for (int i = start; i < start + length; i++) {// creating the text
+				if (ch[i] != '\n')
 					currentText.append(ch[i]);
-			}//creating the text
-		}//current element is <segment/>
-    }
-	
+			}// creating the text
+		}// current element is <segment/>
+	}
+
 	/**
 	 * Stores the AbstractNode object to its corresponding id.
 	 */
-	private HashMap<String, AbstractNode> idAbstractNodeTable= null;
-	
+	private HashMap<String, AbstractNode> idAbstractNodeTable = null;
+
 	/**
-	 * Stores the ids to the AbtractNodes, which were already linked by a relation, but not seen
+	 * Stores the ids to the AbtractNodes, which were already linked by a
+	 * relation, but not seen
 	 */
-	private HashMap<String, Vector<Relation>> idRelationTable= null;
+	private HashMap<String, Vector<Relation>> idRelationTable = null;
+
 	/**
 	 * puts an id and a relation to the table
+	 * 
 	 * @param id
 	 * @param relation
 	 */
-	private void addRelation2Table(String id, Relation relation)
-	{
-		Vector<Relation> slot= this.idRelationTable.get(id); 
-		if (slot== null)
-		{
-			slot= new Vector<Relation>();
+	private void addRelation2Table(String id, Relation relation) {
+		Vector<Relation> slot = this.idRelationTable.get(id);
+		if (slot == null) {
+			slot = new Vector<Relation>();
 			this.idRelationTable.put(id, slot);
 		}
 		slot.add(relation);
 	}
-	
+
 	/**
 	 * Storws the last read Sgement-object.
 	 */
-	private Segment currentSegment= null;
-	
+	private Segment currentSegment = null;
+
 	/**
 	 * 
 	 * @param uri
@@ -157,137 +163,119 @@ public class RSTReader extends DefaultHandler2
 	 * @throws SAXException
 	 */
 	@Override
-	public void startElement(	String uri,
-            					String localName,
-            					String qName,
-            					Attributes attributes) throws SAXException
-    {
-		if (qName.equals(RSTVocabulary.TAG_RST))
-		{//element <rst/> found
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		if (qName.equals(RSTVocabulary.TAG_RST)) {// element <rst/> found
 			this.rstElementStack.push(RSTElements.RST);
-		}//element <rst/> found
-		else if (qName.equals(RSTVocabulary.TAG_HEADER))
-		{//element <header/> found
+		}// element <rst/> found
+		else if (qName.equals(RSTVocabulary.TAG_HEADER)) {// element <header/>
+															// found
 			this.rstElementStack.push(RSTElements.HEADER);
-		}//element <header/> found
-		else if (qName.equals(RSTVocabulary.TAG_ENCODING))
-		{//element <encoding/> found
+		}// element <header/> found
+		else if (qName.equals(RSTVocabulary.TAG_ENCODING)) {// element
+															// <encoding/> found
 			this.rstElementStack.push(RSTElements.ENCODING);
-		}//element <encoding/> found
-		else if (qName.equals(RSTVocabulary.TAG_RELATIONS))
-		{//element <relations/> found
+		}// element <encoding/> found
+		else if (qName.equals(RSTVocabulary.TAG_RELATIONS)) {// element
+																// <relations/>
+																// found
 			this.rstElementStack.push(RSTElements.RELATIONS);
-		}//element <relations/> found
-		else if (qName.equals(RSTVocabulary.TAG_REL))
-		{//element <rel/> found
+		}// element <relations/> found
+		else if (qName.equals(RSTVocabulary.TAG_REL)) {// element <rel/> found
 			this.rstElementStack.push(RSTElements.REL);
-			String relName= attributes.getValue(RSTVocabulary.ATT_NAME);
-			String relType= attributes.getValue(RSTVocabulary.ATT_TYPE);
+			String relName = attributes.getValue(RSTVocabulary.ATT_NAME);
+			String relType = attributes.getValue(RSTVocabulary.ATT_TYPE);
 			relNameType.put(relName, relType);
-		}//element <rel/> found
-		else if (qName.equals(RSTVocabulary.TAG_BODY))
-		{//element <body/> found
+		}// element <rel/> found
+		else if (qName.equals(RSTVocabulary.TAG_BODY)) {// element <body/> found
 			this.rstElementStack.push(RSTElements.BODY);
-		}//element <body/> found
-		else if (qName.equals(RSTVocabulary.TAG_SEGMENT))
-		{//element <segment/> found
+		}// element <body/> found
+		else if (qName.equals(RSTVocabulary.TAG_SEGMENT)) {// element <segment/>
+															// found
 			this.rstElementStack.push(RSTElements.SEGMENT);
-			Segment segment= RSTFactory.eINSTANCE.createSegment();
+			Segment segment = RSTFactory.eINSTANCE.createSegment();
 			segment.setId(attributes.getValue(RSTVocabulary.ATT_ID));
 			this.getRSTDocument().getSegments().add(segment);
-			
-			if (attributes.getValue(RSTVocabulary.ATT_TYPE)!= null)
+
+			if (attributes.getValue(RSTVocabulary.ATT_TYPE) != null)
 				segment.setType(attributes.getValue(RSTVocabulary.ATT_TYPE));
-			
+
 			this.idAbstractNodeTable.put(attributes.getValue(RSTVocabulary.ATT_ID), segment);
-			this.currentSegment= segment;
-			{//check if there are relations waiting for this segment
-				Vector<Relation> slot= this.idRelationTable.get(attributes.getValue(RSTVocabulary.ATT_ID));
-				if (slot!= null)
-				{//there are relations waiting for this segment
-					for (Relation relation: slot)
-					{
+			this.currentSegment = segment;
+			{// check if there are relations waiting for this segment
+				Vector<Relation> slot = this.idRelationTable.get(attributes.getValue(RSTVocabulary.ATT_ID));
+				if (slot != null) {// there are relations waiting for this
+									// segment
+					for (Relation relation : slot) {
 						relation.setParent(segment);
 					}
-				}//there are relations waiting for this segment
-			}//check if there are relations waiting for this segment
-			{//creating relation
-				if (attributes.getValue(RSTVocabulary.ATT_PARENT)!= null)
-				{
-					Relation relation= RSTFactory.eINSTANCE.createRelation();
+				}// there are relations waiting for this segment
+			}// check if there are relations waiting for this segment
+			{// creating relation
+				if (attributes.getValue(RSTVocabulary.ATT_PARENT) != null) {
+					Relation relation = RSTFactory.eINSTANCE.createRelation();
 					relation.setChild(segment);
 					this.getRSTDocument().getRelations().add(relation);
-					if (attributes.getValue(RSTVocabulary.ATT_RELNAME)!= null)
-					{
-						String relname= attributes.getValue(RSTVocabulary.ATT_RELNAME); 
+					if (attributes.getValue(RSTVocabulary.ATT_RELNAME) != null) {
+						String relname = attributes.getValue(RSTVocabulary.ATT_RELNAME);
 						relation.setName(relname);
-						if (this.relNameType.containsKey(relname))
-						{
+						if (this.relNameType.containsKey(relname)) {
 							relation.setType(relNameType.get(relname));
 						}
 					}
-					AbstractNode parent= this.idAbstractNodeTable.get(attributes.getValue(RSTVocabulary.ATT_PARENT));
-					if (parent== null)
-					{//parent does not exist so far
+					AbstractNode parent = this.idAbstractNodeTable.get(attributes.getValue(RSTVocabulary.ATT_PARENT));
+					if (parent == null) {// parent does not exist so far
 						this.addRelation2Table(attributes.getValue(RSTVocabulary.ATT_PARENT), relation);
-					}//parent does not exist so far
-					else
-					{//parent already exists
+					}// parent does not exist so far
+					else {// parent already exists
 						relation.setParent(parent);
-					}//parent already exists	
+					}// parent already exists
 				}
-			}//creating relation
-		}//element <segment/> found
-		else if (qName.equals(RSTVocabulary.TAG_GROUP))
-		{//element <group/> found
+			}// creating relation
+		}// element <segment/> found
+		else if (qName.equals(RSTVocabulary.TAG_GROUP)) {// element <group/>
+															// found
 			this.rstElementStack.push(RSTElements.GROUP);
-			Group group= RSTFactory.eINSTANCE.createGroup();
+			Group group = RSTFactory.eINSTANCE.createGroup();
 			group.setId(attributes.getValue(RSTVocabulary.ATT_ID));
 			this.getRSTDocument().getGroups().add(group);
-			if (attributes.getValue(RSTVocabulary.ATT_TYPE)!= null)
+			if (attributes.getValue(RSTVocabulary.ATT_TYPE) != null)
 				group.setType(attributes.getValue(RSTVocabulary.ATT_TYPE));
-			
+
 			this.idAbstractNodeTable.put(attributes.getValue(RSTVocabulary.ATT_ID), group);
-			{//check if there are relations waiting for this segment
-				Vector<Relation> slot= this.idRelationTable.get(attributes.getValue(RSTVocabulary.ATT_ID));
-				if (slot!= null)
-				{//there are relations waiting for this segment
-					for (Relation relation: slot)
-					{
+			{// check if there are relations waiting for this segment
+				Vector<Relation> slot = this.idRelationTable.get(attributes.getValue(RSTVocabulary.ATT_ID));
+				if (slot != null) {// there are relations waiting for this
+									// segment
+					for (Relation relation : slot) {
 						relation.setParent(group);
 					}
-				}//there are relations waiting for this segment
-			}//check if there are relations waiting for this segment
-			{//creating relation
-				if (attributes.getValue(RSTVocabulary.ATT_PARENT)!= null)
-				{
-					Relation relation= RSTFactory.eINSTANCE.createRelation();
+				}// there are relations waiting for this segment
+			}// check if there are relations waiting for this segment
+			{// creating relation
+				if (attributes.getValue(RSTVocabulary.ATT_PARENT) != null) {
+					Relation relation = RSTFactory.eINSTANCE.createRelation();
 					this.getRSTDocument().getRelations().add(relation);
 					relation.setChild(group);
-					if (attributes.getValue(RSTVocabulary.ATT_RELNAME)!= null)
-					{
-						String relname= attributes.getValue(RSTVocabulary.ATT_RELNAME); 
+					if (attributes.getValue(RSTVocabulary.ATT_RELNAME) != null) {
+						String relname = attributes.getValue(RSTVocabulary.ATT_RELNAME);
 						relation.setName(relname);
-						if (this.relNameType.containsKey(relname))
-						{
+						if (this.relNameType.containsKey(relname)) {
 							relation.setType(relNameType.get(relname));
 						}
 					}
-					
-					AbstractNode parent= this.idAbstractNodeTable.get(attributes.getValue(RSTVocabulary.ATT_PARENT));
-					if (parent== null)
-					{//parent does not exist so far
+
+					AbstractNode parent = this.idAbstractNodeTable.get(attributes.getValue(RSTVocabulary.ATT_PARENT));
+					if (parent == null) {// parent does not exist so far
 						this.addRelation2Table(attributes.getValue(RSTVocabulary.ATT_PARENT), relation);
-					}//parent does not exist so far
-					else
-					{//parent already exists
+					}// parent does not exist so far
+					else {// parent already exists
 						relation.setParent(parent);
-					}//parent already exists
+					}// parent already exists
 				}
-			}//creating relation
-		}//element <group/> found
-    }
-	
+			}// creating relation
+		}// element <group/> found
+	}
+
 	/**
 	 * 
 	 * @param namespaceURI
@@ -296,23 +284,22 @@ public class RSTReader extends DefaultHandler2
 	 * @throws SAXException
 	 */
 	@Override
-	public void endElement(String namespaceURI, String localName, String qName) throws SAXException
-	{
+	public void endElement(String namespaceURI, String localName, String qName) throws SAXException {
 		this.rstElementStack.pop();
-		if (qName.equals(RSTVocabulary.TAG_BODY))
-		{//element <body/> found
-			
-		}//element <body/> found
-		else if (qName.equals(RSTVocabulary.TAG_SEGMENT))
-		{//element <segment/> found
-			if (this.currentText!= null)
+		if (qName.equals(RSTVocabulary.TAG_BODY)) {// element <body/> found
+
+		}// element <body/> found
+		else if (qName.equals(RSTVocabulary.TAG_SEGMENT)) {// element <segment/>
+															// found
+			if (this.currentText != null) {
 				this.currentSegment.setText(this.currentText.toString());
-			this.currentText= null;
-			this.currentSegment= null;
-		}//element <segment/> found
-		else if (qName.equals(RSTVocabulary.TAG_GROUP))
-		{//element <group/> found
-			
-		}//element <group/> found
+			}
+			this.currentText = null;
+			this.currentSegment = null;
+		}// element <segment/> found
+		else if (qName.equals(RSTVocabulary.TAG_GROUP)) {// element <group/>
+															// found
+
+		}// element <group/> found
 	}
 }
