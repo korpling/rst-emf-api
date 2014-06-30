@@ -12,6 +12,14 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+    <issueManagement>
+        <system>GitHub</system>
+		<url>https://github.com/korpling/rst-emf-api/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://korpling.german.hu-berlin.de/jenkins/</url>
+    </ciManagement>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <component.descriptor.name>serviceComponents.xml</component.descriptor.name>
@@ -21,7 +29,9 @@
         <notice.file>${basedir}/NOTICE</notice.file>
     </properties>
     <scm>
-        <developerConnection>scm:svn:https://korpling.german.hu-berlin.de/svn/saltnpepper/models/rst-api/trunk</developerConnection>
+        <connection>scm:git:git://github.com/korpling/rst-emf-api.git</connection>
+		<developerConnection>scm:git:git@github.com:korpling/rst-emf-api.git</developerConnection>
+		<url>https://github.com/korpling/rst-emf-api</url>
     </scm>
     <distributionManagement>
         <repository>
@@ -112,15 +122,24 @@
             </plugin>
             <!-- start: Plugin for automatic releasing -->
             <plugin>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.1</version>
-                <configuration>
-                    <tagBase>
-                        https://korpling.german.hu-berlin.de/svn/saltnpepper/models/rst-api/tags/ </tagBase>
-                    <releaseProfiles>release</releaseProfiles>
-                    <goals>package assembly:single deploy</goals>
-                </configuration>
-            </plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>${maven-release-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>default</id>
+						<goals>
+							<goal>perform</goal>        			
+						</goals>
+						<configuration>
+							<pomFileName>rst-emf-api/pom.xml</pomFileName>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+				  <releaseProfiles>release</releaseProfiles>
+				  <goals>package assembly:single deploy</goals>
+				</configuration>
+			</plugin>
             <!-- end: Plugin for automatic releasing -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
