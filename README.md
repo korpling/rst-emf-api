@@ -7,6 +7,8 @@ The RST model was deleoped with EMF, the Eclipse Modeling Framework (see: http:/
 
 The following figure shows the RST model, provided by this api.
 
+(./gh-site/img/rst.jpg)
+
 The model was created following the restrictions of the following dtd.
 
 
@@ -77,3 +79,5 @@ Here we give a brief excerpt, of how to create a simple RSTGraph:
  rstDocument.getSegments().add(seg3);
 ```
 This excerpt creates the following rst graph:
+
+(./gh-site/img/b1_sample.jpg)
