@@ -19,20 +19,19 @@ package de.hu_berlin.german.korpling.rst.tests;
 
 import de.hu_berlin.german.korpling.rst.RSTFactory;
 import de.hu_berlin.german.korpling.rst.Segment;
-
 import junit.textui.TestRunner;
 
 /**
- * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Segment</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A test case for the model object '
+ * <em><b>Segment</b></em>'. <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class SegmentTest extends AbstractNodeTest {
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -40,9 +39,9 @@ public class SegmentTest extends AbstractNodeTest {
 	}
 
 	/**
-	 * Constructs a new Segment test case with the given name.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Constructs a new Segment test case with the given name. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public SegmentTest(String name) {
@@ -50,19 +49,19 @@ public class SegmentTest extends AbstractNodeTest {
 	}
 
 	/**
-	 * Returns the fixture for this Segment test case.
-	 * <!-- begin-user-doc -->
+	 * Returns the fixture for this Segment test case. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	protected Segment getFixture() {
-		return (Segment)fixture;
+		return (Segment) fixture;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -72,8 +71,8 @@ public class SegmentTest extends AbstractNodeTest {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */
@@ -81,6 +80,7 @@ public class SegmentTest extends AbstractNodeTest {
 	protected void tearDown() throws Exception {
 		setFixture(null);
 	}
-	public void testAlibi()
-	{}
-} //SegmentTest
+
+	public void testAlibi() {
+	}
+} // SegmentTest

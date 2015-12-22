@@ -17,28 +17,25 @@
  */
 package de.hu_berlin.german.korpling.rst.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import de.hu_berlin.german.korpling.rst.Group;
 import de.hu_berlin.german.korpling.rst.RSTDocument;
 import de.hu_berlin.german.korpling.rst.RSTPackage;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
-
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Group</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Group</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.GroupImpl#getDocument <em>Document</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.GroupImpl#getDocument
+ * <em>Document</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,8 +43,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class GroupImpl extends AbstractNodeImpl implements Group {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected GroupImpl() {
@@ -55,8 +52,8 @@ public class GroupImpl extends AbstractNodeImpl implements Group {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -65,28 +62,29 @@ public class GroupImpl extends AbstractNodeImpl implements Group {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RSTDocument getDocument() {
-		if (eContainerFeatureID() != RSTPackage.GROUP__DOCUMENT) return null;
-		return (RSTDocument)eContainer();
+		if (eContainerFeatureID() != RSTPackage.GROUP__DOCUMENT)
+			return null;
+		return (RSTDocument) eContainer();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetDocument(RSTDocument newDocument, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newDocument, RSTPackage.GROUP__DOCUMENT, msgs);
+		msgs = eBasicSetContainer((InternalEObject) newDocument, RSTPackage.GROUP__DOCUMENT, msgs);
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setDocument(RSTDocument newDocument) {
@@ -97,114 +95,114 @@ public class GroupImpl extends AbstractNodeImpl implements Group {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDocument != null)
-				msgs = ((InternalEObject)newDocument).eInverseAdd(this, RSTPackage.RST_DOCUMENT__GROUPS, RSTDocument.class, msgs);
+				msgs = ((InternalEObject) newDocument).eInverseAdd(this, RSTPackage.RST_DOCUMENT__GROUPS, RSTDocument.class, msgs);
 			msgs = basicSetDocument(newDocument, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RSTPackage.GROUP__DOCUMENT, newDocument, newDocument));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case RSTPackage.GROUP__DOCUMENT:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetDocument((RSTDocument)otherEnd, msgs);
+		case RSTPackage.GROUP__DOCUMENT:
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			return basicSetDocument((RSTDocument) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case RSTPackage.GROUP__DOCUMENT:
-				return basicSetDocument(null, msgs);
+		case RSTPackage.GROUP__DOCUMENT:
+			return basicSetDocument(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case RSTPackage.GROUP__DOCUMENT:
-				return eInternalContainer().eInverseRemove(this, RSTPackage.RST_DOCUMENT__GROUPS, RSTDocument.class, msgs);
+		case RSTPackage.GROUP__DOCUMENT:
+			return eInternalContainer().eInverseRemove(this, RSTPackage.RST_DOCUMENT__GROUPS, RSTDocument.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RSTPackage.GROUP__DOCUMENT:
-				return getDocument();
+		case RSTPackage.GROUP__DOCUMENT:
+			return getDocument();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RSTPackage.GROUP__DOCUMENT:
-				setDocument((RSTDocument)newValue);
-				return;
+		case RSTPackage.GROUP__DOCUMENT:
+			setDocument((RSTDocument) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RSTPackage.GROUP__DOCUMENT:
-				setDocument((RSTDocument)null);
-				return;
+		case RSTPackage.GROUP__DOCUMENT:
+			setDocument((RSTDocument) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RSTPackage.GROUP__DOCUMENT:
-				return getDocument() != null;
+		case RSTPackage.GROUP__DOCUMENT:
+			return getDocument() != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //GroupImpl
+} // GroupImpl

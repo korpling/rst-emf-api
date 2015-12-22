@@ -17,29 +17,27 @@
  */
 package de.hu_berlin.german.korpling.rst.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import de.hu_berlin.german.korpling.rst.RSTDocument;
 import de.hu_berlin.german.korpling.rst.RSTPackage;
 import de.hu_berlin.german.korpling.rst.Segment;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
-
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Segment</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Segment</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl#getDocument <em>Document</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl#getText <em>Text</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl#getDocument
+ * <em>Document</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl#getText
+ * <em>Text</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,8 +46,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 public class SegmentImpl extends AbstractNodeImpl implements Segment {
 	/**
 	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getText()
 	 * @generated
 	 * @ordered
@@ -58,8 +56,8 @@ public class SegmentImpl extends AbstractNodeImpl implements Segment {
 
 	/**
 	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getText()
 	 * @generated
 	 * @ordered
@@ -67,8 +65,8 @@ public class SegmentImpl extends AbstractNodeImpl implements Segment {
 	protected String text = TEXT_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected SegmentImpl() {
@@ -76,8 +74,8 @@ public class SegmentImpl extends AbstractNodeImpl implements Segment {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -86,28 +84,29 @@ public class SegmentImpl extends AbstractNodeImpl implements Segment {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RSTDocument getDocument() {
-		if (eContainerFeatureID() != RSTPackage.SEGMENT__DOCUMENT) return null;
-		return (RSTDocument)eContainer();
+		if (eContainerFeatureID() != RSTPackage.SEGMENT__DOCUMENT)
+			return null;
+		return (RSTDocument) eContainer();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetDocument(RSTDocument newDocument, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newDocument, RSTPackage.SEGMENT__DOCUMENT, msgs);
+		msgs = eBasicSetContainer((InternalEObject) newDocument, RSTPackage.SEGMENT__DOCUMENT, msgs);
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setDocument(RSTDocument newDocument) {
@@ -118,17 +117,17 @@ public class SegmentImpl extends AbstractNodeImpl implements Segment {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDocument != null)
-				msgs = ((InternalEObject)newDocument).eInverseAdd(this, RSTPackage.RST_DOCUMENT__SEGMENTS, RSTDocument.class, msgs);
+				msgs = ((InternalEObject) newDocument).eInverseAdd(this, RSTPackage.RST_DOCUMENT__SEGMENTS, RSTDocument.class, msgs);
 			msgs = basicSetDocument(newDocument, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RSTPackage.SEGMENT__DOCUMENT, newDocument, newDocument));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String getText() {
@@ -136,8 +135,8 @@ public class SegmentImpl extends AbstractNodeImpl implements Segment {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setText(String newText) {
@@ -148,125 +147,126 @@ public class SegmentImpl extends AbstractNodeImpl implements Segment {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case RSTPackage.SEGMENT__DOCUMENT:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetDocument((RSTDocument)otherEnd, msgs);
+		case RSTPackage.SEGMENT__DOCUMENT:
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			return basicSetDocument((RSTDocument) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case RSTPackage.SEGMENT__DOCUMENT:
-				return basicSetDocument(null, msgs);
+		case RSTPackage.SEGMENT__DOCUMENT:
+			return basicSetDocument(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case RSTPackage.SEGMENT__DOCUMENT:
-				return eInternalContainer().eInverseRemove(this, RSTPackage.RST_DOCUMENT__SEGMENTS, RSTDocument.class, msgs);
+		case RSTPackage.SEGMENT__DOCUMENT:
+			return eInternalContainer().eInverseRemove(this, RSTPackage.RST_DOCUMENT__SEGMENTS, RSTDocument.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RSTPackage.SEGMENT__DOCUMENT:
-				return getDocument();
-			case RSTPackage.SEGMENT__TEXT:
-				return getText();
+		case RSTPackage.SEGMENT__DOCUMENT:
+			return getDocument();
+		case RSTPackage.SEGMENT__TEXT:
+			return getText();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RSTPackage.SEGMENT__DOCUMENT:
-				setDocument((RSTDocument)newValue);
-				return;
-			case RSTPackage.SEGMENT__TEXT:
-				setText((String)newValue);
-				return;
+		case RSTPackage.SEGMENT__DOCUMENT:
+			setDocument((RSTDocument) newValue);
+			return;
+		case RSTPackage.SEGMENT__TEXT:
+			setText((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RSTPackage.SEGMENT__DOCUMENT:
-				setDocument((RSTDocument)null);
-				return;
-			case RSTPackage.SEGMENT__TEXT:
-				setText(TEXT_EDEFAULT);
-				return;
+		case RSTPackage.SEGMENT__DOCUMENT:
+			setDocument((RSTDocument) null);
+			return;
+		case RSTPackage.SEGMENT__TEXT:
+			setText(TEXT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RSTPackage.SEGMENT__DOCUMENT:
-				return getDocument() != null;
-			case RSTPackage.SEGMENT__TEXT:
-				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
+		case RSTPackage.SEGMENT__DOCUMENT:
+			return getDocument() != null;
+		case RSTPackage.SEGMENT__TEXT:
+			return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (text: ");
@@ -275,4 +275,4 @@ public class SegmentImpl extends AbstractNodeImpl implements Segment {
 		return result.toString();
 	}
 
-} //SegmentImpl
+} // SegmentImpl

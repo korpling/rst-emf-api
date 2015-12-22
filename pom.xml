@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>org.corpus-tools</groupId>
-    <artifactId>rst-emf-api</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
-    <packaging>bundle</packaging>
-    <description>Model for RST</description>
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-    <issueManagement>
-        <system>GitHub</system>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.corpus-tools</groupId>
+	<artifactId>rst-emf-api</artifactId>
+	<version>1.0.4-SNAPSHOT</version>
+	<packaging>bundle</packaging>
+	<description>The project rst-emf-api offers a simple java api and model to access and describe RST data used by the RST tool (see: http://www.wagsoft.com/RSTTool/). RST stands for rhetorical structure theory. The api provides methods to read and write rs3 files and manipulate the included data.</description>
+	<url>https://github.com/korpling/rst-emf-api</url>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<issueManagement>
+		<system>GitHub</system>
 		<url>https://github.com/korpling/rst-emf-api/issues</url>
-    </issueManagement>
+	</issueManagement>
 	<developers>
 		<developer>
 			<name>Florian Zipser</name>
@@ -24,25 +26,34 @@
 			<organizationUrl>https://www.hu-berlin.de</organizationUrl>
 		</developer>
 	</developers>
-	<description>The project rst-emf-api offers a simple java api and model to access and describe RST data used by the RST tool (see: http://www.wagsoft.com/RSTTool/). RST stands for rhetorical structure theory. The api provides methods to read and write rs3 files and manipulate the included data.</description>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <component.descriptor.name>serviceComponents.xml</component.descriptor.name>
-        <bundle.file>${project.groupId}.${project.artifactId}_${project.version}.jar</bundle.file>
-        <assemblies.name>src/assemble/assemblies.xml</assemblies.name>
-        <license.file>${basedir}/LICENSE</license.file>
-        <notice.file>${basedir}/NOTICE</notice.file>
-        <emf.version>2.9.1-v20130827-0309</emf.version>
+	<properties>
+		<java.version>1.7</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<component.descriptor.name>serviceComponents.xml</component.descriptor.name>
+		<bundle.file>${project.groupId}.${project.artifactId}_${project.version}.jar</bundle.file>
+		<assemblies.name>src/assemble/assemblies.xml</assemblies.name>
+		<license.file>${basedir}/LICENSE</license.file>
+		<notice.file>${basedir}/NOTICE</notice.file>
+		<emf.version>2.9.1-v20130827-0309</emf.version>
+		<maven-bundle-plugin.version>2.1.0</maven-bundle-plugin.version>
+		<maven-notice-plugin.version>1.0.4</maven-notice-plugin.version>
+		<maven-license-plugin.version>1.4.0</maven-license-plugin.version>
+		<maven-release-plugin.version>2.2.1</maven-release-plugin.version>
+		<maven-source-plugin.version>2.2.1</maven-source-plugin.version>
+		<maven-assembly-plugin.version>2.2</maven-assembly-plugin.version>
+		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+		<xmlunit.version>1.3</xmlunit.version>
+		<junit.version>3.8.1</junit.version>
 		<exec-maven-plugin.version>1.4.0</exec-maven-plugin.version>
 		<maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
 		<maven-source-plugin.version>2.4</maven-source-plugin.version>
 		<maven-javadoc-plugin.version>2.10.1</maven-javadoc-plugin.version>
-    </properties>
-    <scm>
-        <connection>scm:git:git://github.com/korpling/rst-emf-api.git</connection>
+	</properties>
+	<scm>
+		<connection>scm:git:git://github.com/korpling/rst-emf-api.git</connection>
 		<developerConnection>scm:git:git@github.com:korpling/rst-emf-api.git</developerConnection>
 		<url>https://github.com/korpling/rst-emf-api</url>
-    </scm>
+	</scm>
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
@@ -53,53 +64,52 @@
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
-    <repositories>
-        <repository>
-            <id>korpling</id>
-            <name>korpling maven repo</name>
-            <url>http://korpling.german.hu-berlin.de/maven2</url>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<id>korpling</id>
+			<name>korpling maven repo</name>
+			<url>http://korpling.german.hu-berlin.de/maven2</url>
+		</repository>
+	</repositories>
 
-    <ciManagement>
-        <system>Jenkins</system>
-        <url>https://korpling.german.hu-berlin.de/jenkins/</url>
-    </ciManagement>
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>https://korpling.german.hu-berlin.de/jenkins/</url>
+	</ciManagement>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>xmlunit</groupId>
-            <artifactId>xmlunit</artifactId>
-            <version>1.3</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.common</artifactId>
-            <version>${emf.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.ecore</artifactId>
-            <version>${emf.version}</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
-            <version>${emf.version}</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
-
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>xmlunit</groupId>
+			<artifactId>xmlunit</artifactId>
+			<version>${xmlunit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.common</artifactId>
+			<version>${emf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore</artifactId>
+			<version>${emf.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+			<version>${emf.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
     <build>
         <plugins>
             <!-- generate a jar for sources -->
@@ -262,5 +272,5 @@
 			</build>
 		</profile>
 	</profiles>
-    <name>${project.groupId}.${project.artifactId}</name>
+	<name>${project.groupId}.${project.artifactId}</name>
 </project>

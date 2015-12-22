@@ -119,8 +119,8 @@ public class RSTReader extends DefaultHandler2 {
 			for (int i = start; i < start + length; i++) {// creating the text
 				if (ch[i] != '\n')
 					currentText.append(ch[i]);
-			}// creating the text
-		}// current element is <segment/>
+			} // creating the text
+		} // current element is <segment/>
 	}
 
 	/**
@@ -166,29 +166,29 @@ public class RSTReader extends DefaultHandler2 {
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		if (qName.equals(RSTVocabulary.TAG_RST)) {// element <rst/> found
 			this.rstElementStack.push(RSTElements.RST);
-		}// element <rst/> found
+		} // element <rst/> found
 		else if (qName.equals(RSTVocabulary.TAG_HEADER)) {// element <header/>
 															// found
 			this.rstElementStack.push(RSTElements.HEADER);
-		}// element <header/> found
+		} // element <header/> found
 		else if (qName.equals(RSTVocabulary.TAG_ENCODING)) {// element
 															// <encoding/> found
 			this.rstElementStack.push(RSTElements.ENCODING);
-		}// element <encoding/> found
+		} // element <encoding/> found
 		else if (qName.equals(RSTVocabulary.TAG_RELATIONS)) {// element
 																// <relations/>
 																// found
 			this.rstElementStack.push(RSTElements.RELATIONS);
-		}// element <relations/> found
+		} // element <relations/> found
 		else if (qName.equals(RSTVocabulary.TAG_REL)) {// element <rel/> found
 			this.rstElementStack.push(RSTElements.REL);
 			String relName = attributes.getValue(RSTVocabulary.ATT_NAME);
 			String relType = attributes.getValue(RSTVocabulary.ATT_TYPE);
 			relNameType.put(relName, relType);
-		}// element <rel/> found
+		} // element <rel/> found
 		else if (qName.equals(RSTVocabulary.TAG_BODY)) {// element <body/> found
 			this.rstElementStack.push(RSTElements.BODY);
-		}// element <body/> found
+		} // element <body/> found
 		else if (qName.equals(RSTVocabulary.TAG_SEGMENT)) {// element <segment/>
 															// found
 			this.rstElementStack.push(RSTElements.SEGMENT);
@@ -208,8 +208,8 @@ public class RSTReader extends DefaultHandler2 {
 					for (Relation relation : slot) {
 						relation.setParent(segment);
 					}
-				}// there are relations waiting for this segment
-			}// check if there are relations waiting for this segment
+				} // there are relations waiting for this segment
+			} // check if there are relations waiting for this segment
 			{// creating relation
 				if (attributes.getValue(RSTVocabulary.ATT_PARENT) != null) {
 					Relation relation = RSTFactory.eINSTANCE.createRelation();
@@ -225,13 +225,13 @@ public class RSTReader extends DefaultHandler2 {
 					AbstractNode parent = this.idAbstractNodeTable.get(attributes.getValue(RSTVocabulary.ATT_PARENT));
 					if (parent == null) {// parent does not exist so far
 						this.addRelation2Table(attributes.getValue(RSTVocabulary.ATT_PARENT), relation);
-					}// parent does not exist so far
+					} // parent does not exist so far
 					else {// parent already exists
 						relation.setParent(parent);
-					}// parent already exists
+					} // parent already exists
 				}
-			}// creating relation
-		}// element <segment/> found
+			} // creating relation
+		} // element <segment/> found
 		else if (qName.equals(RSTVocabulary.TAG_GROUP)) {// element <group/>
 															// found
 			this.rstElementStack.push(RSTElements.GROUP);
@@ -249,8 +249,8 @@ public class RSTReader extends DefaultHandler2 {
 					for (Relation relation : slot) {
 						relation.setParent(group);
 					}
-				}// there are relations waiting for this segment
-			}// check if there are relations waiting for this segment
+				} // there are relations waiting for this segment
+			} // check if there are relations waiting for this segment
 			{// creating relation
 				if (attributes.getValue(RSTVocabulary.ATT_PARENT) != null) {
 					Relation relation = RSTFactory.eINSTANCE.createRelation();
@@ -267,13 +267,13 @@ public class RSTReader extends DefaultHandler2 {
 					AbstractNode parent = this.idAbstractNodeTable.get(attributes.getValue(RSTVocabulary.ATT_PARENT));
 					if (parent == null) {// parent does not exist so far
 						this.addRelation2Table(attributes.getValue(RSTVocabulary.ATT_PARENT), relation);
-					}// parent does not exist so far
+					} // parent does not exist so far
 					else {// parent already exists
 						relation.setParent(parent);
-					}// parent already exists
+					} // parent already exists
 				}
-			}// creating relation
-		}// element <group/> found
+			} // creating relation
+		} // element <group/> found
 	}
 
 	/**
@@ -288,7 +288,7 @@ public class RSTReader extends DefaultHandler2 {
 		this.rstElementStack.pop();
 		if (qName.equals(RSTVocabulary.TAG_BODY)) {// element <body/> found
 
-		}// element <body/> found
+		} // element <body/> found
 		else if (qName.equals(RSTVocabulary.TAG_SEGMENT)) {// element <segment/>
 															// found
 			if (this.currentText != null) {
@@ -296,10 +296,10 @@ public class RSTReader extends DefaultHandler2 {
 			}
 			this.currentText = null;
 			this.currentSegment = null;
-		}// element <segment/> found
+		} // element <segment/> found
 		else if (qName.equals(RSTVocabulary.TAG_GROUP)) {// element <group/>
 															// found
 
-		}// element <group/> found
+		} // element <group/> found
 	}
 }

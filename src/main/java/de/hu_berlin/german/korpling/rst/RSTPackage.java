@@ -23,57 +23,56 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 /**
- * <!-- begin-user-doc -->
- * The <b>Package</b> for the model.
- * It contains accessors for the meta objects to represent
+ * <!-- begin-user-doc --> The <b>Package</b> for the model. It contains
+ * accessors for the meta objects to represent
  * <ul>
- *   <li>each class,</li>
- *   <li>each feature of each class,</li>
- *   <li>each enum,</li>
- *   <li>and each data type</li>
+ * <li>each class,</li>
+ * <li>each feature of each class,</li>
+ * <li>each enum,</li>
+ * <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
+ * 
  * @see de.hu_berlin.german.korpling.rst.RSTFactory
  * @model kind="package"
  * @generated
  */
 public interface RSTPackage extends EPackage {
 	/**
-	 * The package name.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	String eNAME = "rst";
 
 	/**
-	 * The package namespace URI.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	String eNS_URI = "http://korpling.german.hu-berlin.de/saltnpepper/rst/";
 
 	/**
-	 * The package namespace name.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	String eNS_PREFIX = "rst";
 
 	/**
-	 * The singleton instance of the package.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The singleton instance of the package. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	RSTPackage eINSTANCE = de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl <em>Abstract Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The meta object id for the '
+	 * {@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl
+	 * <em>Abstract Node</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
 	 * @see de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl
 	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getAbstractNode()
 	 * @generated
@@ -81,18 +80,18 @@ public interface RSTPackage extends EPackage {
 	int ABSTRACT_NODE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int ABSTRACT_NODE__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Type</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -100,17 +99,18 @@ public interface RSTPackage extends EPackage {
 
 	/**
 	 * The number of structural features of the '<em>Abstract Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int ABSTRACT_NODE_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl <em>Segment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The meta object id for the '
+	 * {@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl <em>Segment</em>
+	 * }' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see de.hu_berlin.german.korpling.rst.impl.SegmentImpl
 	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getSegment()
 	 * @generated
@@ -118,18 +118,18 @@ public interface RSTPackage extends EPackage {
 	int SEGMENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int SEGMENT__ID = ABSTRACT_NODE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Type</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -137,35 +137,36 @@ public interface RSTPackage extends EPackage {
 
 	/**
 	 * The feature id for the '<em><b>Document</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int SEGMENT__DOCUMENT = ABSTRACT_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Text</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int SEGMENT__TEXT = ABSTRACT_NODE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Segment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The number of structural features of the '<em>Segment</em>' class. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int SEGMENT_FEATURE_COUNT = ABSTRACT_NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl <em>Document</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The meta object id for the '
+	 * {@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl
+	 * <em>Document</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl
 	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getRSTDocument()
 	 * @generated
@@ -173,54 +174,55 @@ public interface RSTPackage extends EPackage {
 	int RST_DOCUMENT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RST_DOCUMENT__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Segments</b></em>' containment reference
+	 * list. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RST_DOCUMENT__SEGMENTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Groups</b></em>' containment reference
+	 * list. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RST_DOCUMENT__GROUPS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Relations</b></em>' containment reference
+	 * list. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RST_DOCUMENT__RELATIONS = 3;
 
 	/**
-	 * The number of structural features of the '<em>Document</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The number of structural features of the '<em>Document</em>' class. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RST_DOCUMENT_FEATURE_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl <em>Relation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The meta object id for the '
+	 * {@link de.hu_berlin.german.korpling.rst.impl.RelationImpl
+	 * <em>Relation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see de.hu_berlin.german.korpling.rst.impl.RelationImpl
 	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getRelation()
 	 * @generated
@@ -229,62 +231,63 @@ public interface RSTPackage extends EPackage {
 
 	/**
 	 * The feature id for the '<em><b>Documents</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RELATION__DOCUMENTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Parent</b></em>' reference. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RELATION__PARENT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Child</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Child</b></em>' reference. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RELATION__CHILD = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RELATION__NAME = 3;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Type</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RELATION__TYPE = 4;
 
 	/**
-	 * The number of structural features of the '<em>Relation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The number of structural features of the '<em>Relation</em>' class. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int RELATION_FEATURE_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link de.hu_berlin.german.korpling.rst.impl.GroupImpl <em>Group</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The meta object id for the '
+	 * {@link de.hu_berlin.german.korpling.rst.impl.GroupImpl <em>Group</em>}'
+	 * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see de.hu_berlin.german.korpling.rst.impl.GroupImpl
 	 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getGroup()
 	 * @generated
@@ -292,18 +295,18 @@ public interface RSTPackage extends EPackage {
 	int GROUP = 3;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int GROUP__ID = ABSTRACT_NODE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The feature id for the '<em><b>Type</b></em>' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -311,27 +314,27 @@ public interface RSTPackage extends EPackage {
 
 	/**
 	 * The feature id for the '<em><b>Document</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int GROUP__DOCUMENT = ABSTRACT_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The number of structural features of the '<em>Group</em>' class. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	int GROUP_FEATURE_COUNT = ABSTRACT_NODE_FEATURE_COUNT + 1;
 
-
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.Segment <em>Segment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for class '
+	 * {@link de.hu_berlin.german.korpling.rst.Segment <em>Segment</em>}'. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for class '<em>Segment</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Segment
 	 * @generated
@@ -339,9 +342,10 @@ public interface RSTPackage extends EPackage {
 	EClass getSegment();
 
 	/**
-	 * Returns the meta object for the container reference '{@link de.hu_berlin.german.korpling.rst.Segment#getDocument <em>Document</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the container reference '
+	 * {@link de.hu_berlin.german.korpling.rst.Segment#getDocument
+	 * <em>Document</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the container reference '<em>Document</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Segment#getDocument()
 	 * @see #getSegment()
@@ -350,9 +354,10 @@ public interface RSTPackage extends EPackage {
 	EReference getSegment_Document();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.Segment#getText <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the attribute '
+	 * {@link de.hu_berlin.german.korpling.rst.Segment#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the attribute '<em>Text</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Segment#getText()
 	 * @see #getSegment()
@@ -361,9 +366,10 @@ public interface RSTPackage extends EPackage {
 	EAttribute getSegment_Text();
 
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.RSTDocument <em>Document</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for class '
+	 * {@link de.hu_berlin.german.korpling.rst.RSTDocument <em>Document</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for class '<em>Document</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.RSTDocument
 	 * @generated
@@ -371,9 +377,10 @@ public interface RSTPackage extends EPackage {
 	EClass getRSTDocument();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the attribute '
+	 * {@link de.hu_berlin.german.korpling.rst.RSTDocument#getName <em>Name</em>
+	 * }'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the attribute '<em>Name</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getName()
 	 * @see #getRSTDocument()
@@ -382,10 +389,12 @@ public interface RSTPackage extends EPackage {
 	EAttribute getRSTDocument_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getSegments <em>Segments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Segments</em>'.
+	 * Returns the meta object for the containment reference list '
+	 * {@link de.hu_berlin.german.korpling.rst.RSTDocument#getSegments
+	 * <em>Segments</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @return the meta object for the containment reference list '
+	 *         <em>Segments</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getSegments()
 	 * @see #getRSTDocument()
 	 * @generated
@@ -393,10 +402,12 @@ public interface RSTPackage extends EPackage {
 	EReference getRSTDocument_Segments();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getGroups <em>Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Groups</em>'.
+	 * Returns the meta object for the containment reference list '
+	 * {@link de.hu_berlin.german.korpling.rst.RSTDocument#getGroups
+	 * <em>Groups</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @return the meta object for the containment reference list '
+	 *         <em>Groups</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getGroups()
 	 * @see #getRSTDocument()
 	 * @generated
@@ -404,10 +415,12 @@ public interface RSTPackage extends EPackage {
 	EReference getRSTDocument_Groups();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getRelations <em>Relations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Relations</em>'.
+	 * Returns the meta object for the containment reference list '
+	 * {@link de.hu_berlin.german.korpling.rst.RSTDocument#getRelations
+	 * <em>Relations</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @return the meta object for the containment reference list '
+	 *         <em>Relations</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.RSTDocument#getRelations()
 	 * @see #getRSTDocument()
 	 * @generated
@@ -415,9 +428,10 @@ public interface RSTPackage extends EPackage {
 	EReference getRSTDocument_Relations();
 
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.Relation <em>Relation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for class '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation <em>Relation</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for class '<em>Relation</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Relation
 	 * @generated
@@ -425,9 +439,10 @@ public interface RSTPackage extends EPackage {
 	EClass getRelation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the attribute '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the attribute '<em>Name</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Relation#getName()
 	 * @see #getRelation()
@@ -436,9 +451,10 @@ public interface RSTPackage extends EPackage {
 	EAttribute getRelation_Name();
 
 	/**
-	 * Returns the meta object for the container reference '{@link de.hu_berlin.german.korpling.rst.Relation#getDocuments <em>Documents</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the container reference '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getDocuments
+	 * <em>Documents</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the container reference '<em>Documents</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Relation#getDocuments()
 	 * @see #getRelation()
@@ -447,9 +463,10 @@ public interface RSTPackage extends EPackage {
 	EReference getRelation_Documents();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.hu_berlin.german.korpling.rst.Relation#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the reference '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getParent
+	 * <em>Parent</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the reference '<em>Parent</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Relation#getParent()
 	 * @see #getRelation()
@@ -458,9 +475,10 @@ public interface RSTPackage extends EPackage {
 	EReference getRelation_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the reference '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}
+	 * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the reference '<em>Child</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Relation#getChild()
 	 * @see #getRelation()
@@ -469,9 +487,10 @@ public interface RSTPackage extends EPackage {
 	EReference getRelation_Child();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the attribute '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the attribute '<em>Type</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Relation#getType()
 	 * @see #getRelation()
@@ -480,9 +499,10 @@ public interface RSTPackage extends EPackage {
 	EAttribute getRelation_Type();
 
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.Group <em>Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for class '
+	 * {@link de.hu_berlin.german.korpling.rst.Group <em>Group</em>}'. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for class '<em>Group</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Group
 	 * @generated
@@ -490,9 +510,10 @@ public interface RSTPackage extends EPackage {
 	EClass getGroup();
 
 	/**
-	 * Returns the meta object for the container reference '{@link de.hu_berlin.german.korpling.rst.Group#getDocument <em>Document</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the container reference '
+	 * {@link de.hu_berlin.german.korpling.rst.Group#getDocument
+	 * <em>Document</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the container reference '<em>Document</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.Group#getDocument()
 	 * @see #getGroup()
@@ -501,9 +522,10 @@ public interface RSTPackage extends EPackage {
 	EReference getGroup_Document();
 
 	/**
-	 * Returns the meta object for class '{@link de.hu_berlin.german.korpling.rst.AbstractNode <em>Abstract Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for class '
+	 * {@link de.hu_berlin.german.korpling.rst.AbstractNode
+	 * <em>Abstract Node</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for class '<em>Abstract Node</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.AbstractNode
 	 * @generated
@@ -511,9 +533,10 @@ public interface RSTPackage extends EPackage {
 	EClass getAbstractNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.AbstractNode#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the attribute '
+	 * {@link de.hu_berlin.german.korpling.rst.AbstractNode#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the attribute '<em>Id</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.AbstractNode#getId()
 	 * @see #getAbstractNode()
@@ -522,9 +545,10 @@ public interface RSTPackage extends EPackage {
 	EAttribute getAbstractNode_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.hu_berlin.german.korpling.rst.AbstractNode#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the meta object for the attribute '
+	 * {@link de.hu_berlin.german.korpling.rst.AbstractNode#getType
+	 * <em>Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the meta object for the attribute '<em>Type</em>'.
 	 * @see de.hu_berlin.german.korpling.rst.AbstractNode#getType()
 	 * @see #getAbstractNode()
@@ -533,31 +557,34 @@ public interface RSTPackage extends EPackage {
 	EAttribute getAbstractNode_Type();
 
 	/**
-	 * Returns the factory that creates the instances of the model.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the factory that creates the instances of the model. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
 	RSTFactory getRSTFactory();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * Defines literals for the meta objects that represent
+	 * <!-- begin-user-doc --> Defines literals for the meta objects that
+	 * represent
 	 * <ul>
-	 *   <li>each class,</li>
-	 *   <li>each feature of each class,</li>
-	 *   <li>each enum,</li>
-	 *   <li>and each data type</li>
+	 * <li>each class,</li>
+	 * <li>each feature of each class,</li>
+	 * <li>each enum,</li>
+	 * <li>and each data type</li>
 	 * </ul>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl <em>Segment</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '
+		 * {@link de.hu_berlin.german.korpling.rst.impl.SegmentImpl
+		 * <em>Segment</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+		 * -->
+		 * 
 		 * @see de.hu_berlin.german.korpling.rst.impl.SegmentImpl
 		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getSegment()
 		 * @generated
@@ -565,25 +592,27 @@ public interface RSTPackage extends EPackage {
 		EClass SEGMENT = eINSTANCE.getSegment();
 
 		/**
-		 * The meta object literal for the '<em><b>Document</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Document</b></em>' container
+		 * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EReference SEGMENT__DOCUMENT = eINSTANCE.getSegment_Document();
 
 		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute
+		 * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EAttribute SEGMENT__TEXT = eINSTANCE.getSegment_Text();
 
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl <em>Document</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '
+		 * {@link de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl
+		 * <em>Document</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+		 * -->
+		 * 
 		 * @see de.hu_berlin.german.korpling.rst.impl.RSTDocumentImpl
 		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getRSTDocument()
 		 * @generated
@@ -591,41 +620,45 @@ public interface RSTPackage extends EPackage {
 		EClass RST_DOCUMENT = eINSTANCE.getRSTDocument();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute
+		 * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EAttribute RST_DOCUMENT__NAME = eINSTANCE.getRSTDocument_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Segments</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Segments</b></em>'
+		 * containment reference list feature. <!-- begin-user-doc --> <!--
+		 * end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EReference RST_DOCUMENT__SEGMENTS = eINSTANCE.getRSTDocument_Segments();
 
 		/**
-		 * The meta object literal for the '<em><b>Groups</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Groups</b></em>' containment
+		 * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EReference RST_DOCUMENT__GROUPS = eINSTANCE.getRSTDocument_Groups();
 
 		/**
-		 * The meta object literal for the '<em><b>Relations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Relations</b></em>'
+		 * containment reference list feature. <!-- begin-user-doc --> <!--
+		 * end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EReference RST_DOCUMENT__RELATIONS = eINSTANCE.getRSTDocument_Relations();
 
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl <em>Relation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '
+		 * {@link de.hu_berlin.german.korpling.rst.impl.RelationImpl
+		 * <em>Relation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+		 * -->
+		 * 
 		 * @see de.hu_berlin.german.korpling.rst.impl.RelationImpl
 		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getRelation()
 		 * @generated
@@ -633,49 +666,50 @@ public interface RSTPackage extends EPackage {
 		EClass RELATION = eINSTANCE.getRelation();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute
+		 * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EAttribute RELATION__NAME = eINSTANCE.getRelation_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Documents</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Documents</b></em>' container
+		 * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EReference RELATION__DOCUMENTS = eINSTANCE.getRelation_Documents();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference
+		 * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EReference RELATION__PARENT = eINSTANCE.getRelation_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Child</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Child</b></em>' reference
+		 * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EReference RELATION__CHILD = eINSTANCE.getRelation_Child();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute
+		 * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EAttribute RELATION__TYPE = eINSTANCE.getRelation_Type();
 
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.GroupImpl <em>Group</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '
+		 * {@link de.hu_berlin.german.korpling.rst.impl.GroupImpl <em>Group</em>
+		 * }' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @see de.hu_berlin.german.korpling.rst.impl.GroupImpl
 		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getGroup()
 		 * @generated
@@ -683,17 +717,19 @@ public interface RSTPackage extends EPackage {
 		EClass GROUP = eINSTANCE.getGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Document</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Document</b></em>' container
+		 * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EReference GROUP__DOCUMENT = eINSTANCE.getGroup_Document();
 
 		/**
-		 * The meta object literal for the '{@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl <em>Abstract Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '
+		 * {@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl
+		 * <em>Abstract Node</em>}' class. <!-- begin-user-doc --> <!--
+		 * end-user-doc -->
+		 * 
 		 * @see de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl
 		 * @see de.hu_berlin.german.korpling.rst.impl.RSTPackageImpl#getAbstractNode()
 		 * @generated
@@ -701,21 +737,21 @@ public interface RSTPackage extends EPackage {
 		EClass ABSTRACT_NODE = eINSTANCE.getAbstractNode();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute
+		 * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EAttribute ABSTRACT_NODE__ID = eINSTANCE.getAbstractNode_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute
+		 * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		EAttribute ABSTRACT_NODE__TYPE = eINSTANCE.getAbstractNode_Type();
 
 	}
 
-} //RSTPackage
+} // RSTPackage

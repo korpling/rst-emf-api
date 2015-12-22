@@ -17,16 +17,15 @@
  */
 package de.hu_berlin.german.korpling.rst;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Group</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '
+ * <em><b>Group</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.rst.Group#getDocument <em>Document</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.Group#getDocument
+ * <em>Document</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,13 +36,15 @@ package de.hu_berlin.german.korpling.rst;
 public interface Group extends AbstractNode {
 	/**
 	 * Returns the value of the '<em><b>Document</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getGroups <em>Groups</em>}'.
-	 * <!-- begin-user-doc -->
+	 * It is bidirectional and its opposite is '
+	 * {@link de.hu_berlin.german.korpling.rst.RSTDocument#getGroups
+	 * <em>Groups</em>}'. <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Document</em>' container reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Document</em>' container reference isn't
+	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Document</em>' container reference.
 	 * @see #setDocument(RSTDocument)
 	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getGroup_Document()
@@ -54,10 +55,13 @@ public interface Group extends AbstractNode {
 	RSTDocument getDocument();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Group#getDocument <em>Document</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Document</em>' container reference.
+	 * Sets the value of the '
+	 * {@link de.hu_berlin.german.korpling.rst.Group#getDocument
+	 * <em>Document</em>}' container reference. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Document</em>' container reference.
 	 * @see #getDocument()
 	 * @generated
 	 */

@@ -19,20 +19,19 @@ package de.hu_berlin.german.korpling.rst.tests;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-
 import junit.textui.TestRunner;
 
 /**
- * <!-- begin-user-doc -->
- * A test suite for the '<em><b>rst</b></em>' model.
+ * <!-- begin-user-doc --> A test suite for the '<em><b>rst</b></em>' model.
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class RstAllTests extends TestSuite {
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -40,8 +39,8 @@ public class RstAllTests extends TestSuite {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static Test suite() {
@@ -51,12 +50,12 @@ public class RstAllTests extends TestSuite {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RstAllTests(String name) {
 		super(name);
 	}
 
-} //RstAllTests
+} // RstAllTests

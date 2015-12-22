@@ -17,34 +17,35 @@
  */
 package de.hu_berlin.german.korpling.rst.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import de.hu_berlin.german.korpling.rst.AbstractNode;
 import de.hu_berlin.german.korpling.rst.RSTDocument;
 import de.hu_berlin.german.korpling.rst.RSTPackage;
 import de.hu_berlin.german.korpling.rst.Relation;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
-
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Relation</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Relation</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getDocuments <em>Documents</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getChild <em>Child</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getType <em>Type</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getDocuments
+ * <em>Documents</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getParent
+ * <em>Parent</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getChild
+ * <em>Child</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getName
+ * <em>Name</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.RelationImpl#getType
+ * <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,8 +54,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 public class RelationImpl extends EObjectImpl implements Relation {
 	/**
 	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getParent()
 	 * @generated
 	 * @ordered
@@ -63,8 +64,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 
 	/**
 	 * The cached value of the '{@link #getChild() <em>Child</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getChild()
 	 * @generated
 	 * @ordered
@@ -73,8 +74,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -83,8 +84,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -93,8 +94,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -103,8 +104,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -112,8 +113,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	protected String type = TYPE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected RelationImpl() {
@@ -121,8 +122,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -131,8 +132,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String getName() {
@@ -140,8 +141,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
@@ -152,28 +153,29 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RSTDocument getDocuments() {
-		if (eContainerFeatureID() != RSTPackage.RELATION__DOCUMENTS) return null;
-		return (RSTDocument)eContainer();
+		if (eContainerFeatureID() != RSTPackage.RELATION__DOCUMENTS)
+			return null;
+		return (RSTDocument) eContainer();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetDocuments(RSTDocument newDocuments, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newDocuments, RSTPackage.RELATION__DOCUMENTS, msgs);
+		msgs = eBasicSetContainer((InternalEObject) newDocuments, RSTPackage.RELATION__DOCUMENTS, msgs);
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setDocuments(RSTDocument newDocuments) {
@@ -184,23 +186,23 @@ public class RelationImpl extends EObjectImpl implements Relation {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDocuments != null)
-				msgs = ((InternalEObject)newDocuments).eInverseAdd(this, RSTPackage.RST_DOCUMENT__RELATIONS, RSTDocument.class, msgs);
+				msgs = ((InternalEObject) newDocuments).eInverseAdd(this, RSTPackage.RST_DOCUMENT__RELATIONS, RSTDocument.class, msgs);
 			msgs = basicSetDocuments(newDocuments, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RSTPackage.RELATION__DOCUMENTS, newDocuments, newDocuments));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public AbstractNode getParent() {
 		if (parent != null && parent.eIsProxy()) {
-			InternalEObject oldParent = (InternalEObject)parent;
-			parent = (AbstractNode)eResolveProxy(oldParent);
+			InternalEObject oldParent = (InternalEObject) parent;
+			parent = (AbstractNode) eResolveProxy(oldParent);
 			if (parent != oldParent) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSTPackage.RELATION__PARENT, oldParent, parent));
@@ -210,8 +212,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public AbstractNode basicGetParent() {
@@ -219,8 +221,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setParent(AbstractNode newParent) {
@@ -231,14 +233,14 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public AbstractNode getChild() {
 		if (child != null && child.eIsProxy()) {
-			InternalEObject oldChild = (InternalEObject)child;
-			child = (AbstractNode)eResolveProxy(oldChild);
+			InternalEObject oldChild = (InternalEObject) child;
+			child = (AbstractNode) eResolveProxy(oldChild);
 			if (child != oldChild) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSTPackage.RELATION__CHILD, oldChild, child));
@@ -248,8 +250,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public AbstractNode basicGetChild() {
@@ -257,8 +259,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setChild(AbstractNode newChild) {
@@ -269,8 +271,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String getType() {
@@ -278,8 +280,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setType(String newType) {
@@ -290,166 +292,168 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case RSTPackage.RELATION__DOCUMENTS:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetDocuments((RSTDocument)otherEnd, msgs);
+		case RSTPackage.RELATION__DOCUMENTS:
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			return basicSetDocuments((RSTDocument) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case RSTPackage.RELATION__DOCUMENTS:
-				return basicSetDocuments(null, msgs);
+		case RSTPackage.RELATION__DOCUMENTS:
+			return basicSetDocuments(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case RSTPackage.RELATION__DOCUMENTS:
-				return eInternalContainer().eInverseRemove(this, RSTPackage.RST_DOCUMENT__RELATIONS, RSTDocument.class, msgs);
+		case RSTPackage.RELATION__DOCUMENTS:
+			return eInternalContainer().eInverseRemove(this, RSTPackage.RST_DOCUMENT__RELATIONS, RSTDocument.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RSTPackage.RELATION__DOCUMENTS:
-				return getDocuments();
-			case RSTPackage.RELATION__PARENT:
-				if (resolve) return getParent();
-				return basicGetParent();
-			case RSTPackage.RELATION__CHILD:
-				if (resolve) return getChild();
-				return basicGetChild();
-			case RSTPackage.RELATION__NAME:
-				return getName();
-			case RSTPackage.RELATION__TYPE:
-				return getType();
+		case RSTPackage.RELATION__DOCUMENTS:
+			return getDocuments();
+		case RSTPackage.RELATION__PARENT:
+			if (resolve)
+				return getParent();
+			return basicGetParent();
+		case RSTPackage.RELATION__CHILD:
+			if (resolve)
+				return getChild();
+			return basicGetChild();
+		case RSTPackage.RELATION__NAME:
+			return getName();
+		case RSTPackage.RELATION__TYPE:
+			return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RSTPackage.RELATION__DOCUMENTS:
-				setDocuments((RSTDocument)newValue);
-				return;
-			case RSTPackage.RELATION__PARENT:
-				setParent((AbstractNode)newValue);
-				return;
-			case RSTPackage.RELATION__CHILD:
-				setChild((AbstractNode)newValue);
-				return;
-			case RSTPackage.RELATION__NAME:
-				setName((String)newValue);
-				return;
-			case RSTPackage.RELATION__TYPE:
-				setType((String)newValue);
-				return;
+		case RSTPackage.RELATION__DOCUMENTS:
+			setDocuments((RSTDocument) newValue);
+			return;
+		case RSTPackage.RELATION__PARENT:
+			setParent((AbstractNode) newValue);
+			return;
+		case RSTPackage.RELATION__CHILD:
+			setChild((AbstractNode) newValue);
+			return;
+		case RSTPackage.RELATION__NAME:
+			setName((String) newValue);
+			return;
+		case RSTPackage.RELATION__TYPE:
+			setType((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RSTPackage.RELATION__DOCUMENTS:
-				setDocuments((RSTDocument)null);
-				return;
-			case RSTPackage.RELATION__PARENT:
-				setParent((AbstractNode)null);
-				return;
-			case RSTPackage.RELATION__CHILD:
-				setChild((AbstractNode)null);
-				return;
-			case RSTPackage.RELATION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case RSTPackage.RELATION__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
+		case RSTPackage.RELATION__DOCUMENTS:
+			setDocuments((RSTDocument) null);
+			return;
+		case RSTPackage.RELATION__PARENT:
+			setParent((AbstractNode) null);
+			return;
+		case RSTPackage.RELATION__CHILD:
+			setChild((AbstractNode) null);
+			return;
+		case RSTPackage.RELATION__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case RSTPackage.RELATION__TYPE:
+			setType(TYPE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RSTPackage.RELATION__DOCUMENTS:
-				return getDocuments() != null;
-			case RSTPackage.RELATION__PARENT:
-				return parent != null;
-			case RSTPackage.RELATION__CHILD:
-				return child != null;
-			case RSTPackage.RELATION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case RSTPackage.RELATION__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+		case RSTPackage.RELATION__DOCUMENTS:
+			return getDocuments() != null;
+		case RSTPackage.RELATION__PARENT:
+			return parent != null;
+		case RSTPackage.RELATION__CHILD:
+			return child != null;
+		case RSTPackage.RELATION__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case RSTPackage.RELATION__TYPE:
+			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer();
-		if (this.getParent()!= null)
+		if (this.getParent() != null)
 			result.append(this.getParent().getId());
-		else 
+		else
 			result.append("unknown");
 		result.append("-->");
-		if (this.getChild()!= null)
+		if (this.getChild() != null)
 			result.append(this.getChild().getId());
-		else 
+		else
 			result.append("unknown");
 		result.append(" (name: ");
 		result.append(name);
@@ -459,4 +463,4 @@ public class RelationImpl extends EObjectImpl implements Relation {
 		return result.toString();
 	}
 
-} //RelationImpl
+} // RelationImpl

@@ -20,18 +20,22 @@ package de.hu_berlin.german.korpling.rst;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Relation</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '
+ * <em><b>Relation</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getDocuments <em>Documents</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getParent <em>Parent</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.Relation#getDocuments
+ * <em>Documents</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.Relation#getParent
+ * <em>Parent</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}
+ * </li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}
+ * </li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}
+ * </li>
  * </ul>
  * </p>
  *
@@ -41,13 +45,14 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Relation extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Name</b></em>' attribute. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear, there really
+	 * should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getRelation_Name()
@@ -57,10 +62,12 @@ public interface Relation extends EObject {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getName <em>Name</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -68,13 +75,15 @@ public interface Relation extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Documents</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link de.hu_berlin.german.korpling.rst.RSTDocument#getRelations <em>Relations</em>}'.
-	 * <!-- begin-user-doc -->
+	 * It is bidirectional and its opposite is '
+	 * {@link de.hu_berlin.german.korpling.rst.RSTDocument#getRelations
+	 * <em>Relations</em>}'. <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Documents</em>' container reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Documents</em>' container reference isn't
+	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Documents</em>' container reference.
 	 * @see #setDocuments(RSTDocument)
 	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getRelation_Documents()
@@ -85,23 +94,27 @@ public interface Relation extends EObject {
 	RSTDocument getDocuments();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Relation#getDocuments <em>Documents</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Documents</em>' container reference.
+	 * Sets the value of the '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getDocuments
+	 * <em>Documents</em>}' container reference. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Documents</em>' container reference.
 	 * @see #getDocuments()
 	 * @generated
 	 */
 	void setDocuments(RSTDocument value);
 
 	/**
-	 * Returns the value of the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Parent</b></em>' reference. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Parent</em>' reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Parent</em>' reference isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Parent</em>' reference.
 	 * @see #setParent(AbstractNode)
 	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getRelation_Parent()
@@ -111,23 +124,27 @@ public interface Relation extends EObject {
 	AbstractNode getParent();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Relation#getParent <em>Parent</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent</em>' reference.
+	 * Sets the value of the '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getParent
+	 * <em>Parent</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Parent</em>' reference.
 	 * @see #getParent()
 	 * @generated
 	 */
 	void setParent(AbstractNode value);
 
 	/**
-	 * Returns the value of the '<em><b>Child</b></em>' reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Child</b></em>' reference. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Child</em>' reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Child</em>' reference isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Child</em>' reference.
 	 * @see #setChild(AbstractNode)
 	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getRelation_Child()
@@ -137,23 +154,26 @@ public interface Relation extends EObject {
 	AbstractNode getChild();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Child</em>' reference.
+	 * Sets the value of the '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getChild <em>Child</em>}
+	 * ' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Child</em>' reference.
 	 * @see #getChild()
 	 * @generated
 	 */
 	void setChild(AbstractNode value);
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Type</b></em>' attribute. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear, there really
+	 * should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.hu_berlin.german.korpling.rst.RSTPackage#getRelation_Type()
@@ -163,10 +183,12 @@ public interface Relation extends EObject {
 	String getType();
 
 	/**
-	 * Sets the value of the '{@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * Sets the value of the '
+	 * {@link de.hu_berlin.german.korpling.rst.Relation#getType <em>Type</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Type</em>' attribute.
 	 * @see #getType()
 	 * @generated
 	 */
