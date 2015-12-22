@@ -30,7 +30,6 @@
 		<developerConnection>scm:git:git@github.com:korpling/rst-emf-api.git</developerConnection>
 		<url>https://github.com/korpling/rst-emf-api</url>
     </scm>
-    <distributionManagement>
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
