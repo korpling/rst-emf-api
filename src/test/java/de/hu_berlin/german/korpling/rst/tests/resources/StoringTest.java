@@ -36,74 +36,67 @@ import de.hu_berlin.german.korpling.rst.RSTDocument;
 import de.hu_berlin.german.korpling.rst.exceptions.RSTException;
 import de.hu_berlin.german.korpling.rst.resources.RSTResourceFactory;
 
-public class StoringTest extends XMLTestCase
-{
-	private void loadSaveCompare(	String inputFileStr, 
-									String outputFileStr,
-									String expectedFileStr) throws IOException, SAXException
-	{
-		File inputFile= new File(inputFileStr);
+public class StoringTest extends XMLTestCase {
+	private void loadSaveCompare(String inputFileStr, String outputFileStr, String expectedFileStr) throws IOException, SAXException {
+		File inputFile = new File(inputFileStr);
 		if (!inputFile.exists())
-			throw new RSTException("Cannot load file, because it is null ("+inputFileStr+").");
-		
-		File outputFile= new File(outputFileStr);
+			throw new RSTException("Cannot load file, because it is null (" + inputFileStr + ").");
+
+		File outputFile = new File(outputFileStr);
 		outputFile.getParentFile().mkdirs();
-		// create resource set and resource 
+		// create resource set and resource
 		ResourceSet resourceSet = new ResourceSetImpl();
 
 		// Register XML resource factory
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi",new XMIResourceFactoryImpl());
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("rs3",new RSTResourceFactory());
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("rs3", new RSTResourceFactory());
 
-		//load resource 
+		// load resource
 		Resource resource = resourceSet.createResource(URI.createFileURI(inputFileStr));
-		
-		if (resource== null)
+
+		if (resource == null)
 			throw new NullPointerException("The resource is null.");
 		resource.load(null);
-		
-		{//save file
-			RSTDocument basicTranscription= (RSTDocument) resource.getContents().get(0);
-			
+
+		{// save file
+			RSTDocument basicTranscription = (RSTDocument) resource.getContents().get(0);
+
 			Resource resourceOut = resourceSet.createResource(URI.createFileURI(outputFileStr));
 			resourceOut.getContents().add(basicTranscription);
 			resourceOut.save(null);
-		}//save file
-		
+		} // save file
+
 		try {
-			InputSource source= new InputSource(expectedFileStr);
-			InputSource target= new InputSource(outputFile.getAbsolutePath());
-			
+			InputSource source = new InputSource(expectedFileStr);
+			InputSource target = new InputSource(outputFile.getAbsolutePath());
+
 			XMLUnit.setIgnoreWhitespace(true);
 			DetailedDiff myDiff = new DetailedDiff(compareXML(source, target));
-		    List allDifferences = myDiff.getAllDifferences();
-		    assertEquals(myDiff.toString(), 0, allDifferences.size());
-			
+			List allDifferences = myDiff.getAllDifferences();
+			assertEquals(myDiff.toString(), 0, allDifferences.size());
+
 		} catch (SAXException e) {
-			throw new RSTException("Cannot compare files '"+expectedFileStr+"' with '"+outputFile.getAbsolutePath()+"'.", e);
+			throw new RSTException("Cannot compare files '" + expectedFileStr + "' with '" + outputFile.getAbsolutePath() + "'.", e);
 		}
 	}
-	
-	private String getTMP()
-	{
-		return(System.getProperty("java.io.tmpdir")+"/rst_api");
+
+	private String getTMP() {
+		return (System.getProperty("java.io.tmpdir") + "/rst_api");
 	}
-	
-	public void testLoadSave1() throws IOException, SAXException
-	{
-		String inputFile= "./src/test/resources/Case1/TestFile.rs3";
-		String expectedFile= "./src/test/resources/Case1/TestFile.rs3";
-		String outputFile= this.getTMP()+"/TestFile.rs3";
-		
+
+	public void testLoadSave1() throws IOException, SAXException {
+		String inputFile = "./src/test/resources/Case1/TestFile.rs3";
+		String expectedFile = "./src/test/resources/Case1/TestFile.rs3";
+		String outputFile = this.getTMP() + "/TestFile.rs3";
+
 		this.loadSaveCompare(inputFile, outputFile, expectedFile);
 	}
-	
-	public void testLoadSave2() throws IOException, SAXException
-	{
-		String inputFile= "./src/test/resources/Case2/Test_PCC.rs3";
-		String expectedFile= "./src/test/resources/Case2/Test_PCC.rs3";
-		String outputFile= this.getTMP()+"/Test_PCC.rs3";
-		
+
+	public void testLoadSave2() throws IOException, SAXException {
+		String inputFile = "./src/test/resources/Case2/Test_PCC.rs3";
+		String expectedFile = "./src/test/resources/Case2/Test_PCC.rs3";
+		String outputFile = this.getTMP() + "/Test_PCC.rs3";
+
 		this.loadSaveCompare(inputFile, outputFile, expectedFile);
 	}
 }

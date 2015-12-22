@@ -17,25 +17,24 @@
  */
 package de.hu_berlin.german.korpling.rst.impl;
 
-import de.hu_berlin.german.korpling.rst.AbstractNode;
-import de.hu_berlin.german.korpling.rst.RSTPackage;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import de.hu_berlin.german.korpling.rst.AbstractNode;
+import de.hu_berlin.german.korpling.rst.RSTPackage;
+
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Abstract Node</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Abstract Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl#getId <em>Id</em>}</li>
- *   <li>{@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl#getType <em>Type</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl#getId
+ * <em>Id</em>}</li>
+ * <li>{@link de.hu_berlin.german.korpling.rst.impl.AbstractNodeImpl#getType
+ * <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,9 +42,9 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  */
 public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNode {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -53,9 +52,9 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -64,8 +63,8 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -74,8 +73,8 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -83,8 +82,8 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 	protected String type = TYPE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected AbstractNodeImpl() {
@@ -92,8 +91,8 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -102,8 +101,8 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String getId() {
@@ -111,8 +110,8 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setId(String newId) {
@@ -123,8 +122,8 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String getType() {
@@ -132,8 +131,8 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setType(String newType) {
@@ -144,81 +143,82 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RSTPackage.ABSTRACT_NODE__ID:
-				return getId();
-			case RSTPackage.ABSTRACT_NODE__TYPE:
-				return getType();
+		case RSTPackage.ABSTRACT_NODE__ID:
+			return getId();
+		case RSTPackage.ABSTRACT_NODE__TYPE:
+			return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RSTPackage.ABSTRACT_NODE__ID:
-				setId((String)newValue);
-				return;
-			case RSTPackage.ABSTRACT_NODE__TYPE:
-				setType((String)newValue);
-				return;
+		case RSTPackage.ABSTRACT_NODE__ID:
+			setId((String) newValue);
+			return;
+		case RSTPackage.ABSTRACT_NODE__TYPE:
+			setType((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RSTPackage.ABSTRACT_NODE__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case RSTPackage.ABSTRACT_NODE__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
+		case RSTPackage.ABSTRACT_NODE__ID:
+			setId(ID_EDEFAULT);
+			return;
+		case RSTPackage.ABSTRACT_NODE__TYPE:
+			setType(TYPE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RSTPackage.ABSTRACT_NODE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case RSTPackage.ABSTRACT_NODE__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+		case RSTPackage.ABSTRACT_NODE__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+		case RSTPackage.ABSTRACT_NODE__TYPE:
+			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
@@ -229,4 +229,4 @@ public abstract class AbstractNodeImpl extends EObjectImpl implements AbstractNo
 		return result.toString();
 	}
 
-} //AbstractNodeImpl
+} // AbstractNodeImpl

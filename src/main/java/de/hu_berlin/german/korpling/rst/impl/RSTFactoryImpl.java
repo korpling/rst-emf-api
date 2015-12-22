@@ -17,46 +17,48 @@
  */
 package de.hu_berlin.german.korpling.rst.impl;
 
-import de.hu_berlin.german.korpling.rst.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import de.hu_berlin.german.korpling.rst.Group;
+import de.hu_berlin.german.korpling.rst.RSTDocument;
+import de.hu_berlin.german.korpling.rst.RSTFactory;
+import de.hu_berlin.german.korpling.rst.RSTPackage;
+import de.hu_berlin.german.korpling.rst.Relation;
+import de.hu_berlin.german.korpling.rst.Segment;
+
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model <b>Factory</b>.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
+ * end-user-doc -->
+ * 
  * @generated
  */
 public class RSTFactoryImpl extends EFactoryImpl implements RSTFactory {
 	/**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Creates the default factory implementation. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static RSTFactory init() {
 		try {
-			RSTFactory theRSTFactory = (RSTFactory)EPackage.Registry.INSTANCE.getEFactory("http://korpling.german.hu-berlin.de/saltnpepper/rst/"); 
+			RSTFactory theRSTFactory = (RSTFactory) EPackage.Registry.INSTANCE.getEFactory("http://korpling.german.hu-berlin.de/saltnpepper/rst/");
 			if (theRSTFactory != null) {
 				return theRSTFactory;
 			}
-		}
-		catch (Exception exception) {
+		} catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new RSTFactoryImpl();
 	}
 
 	/**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Creates an instance of the factory. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RSTFactoryImpl() {
@@ -64,25 +66,29 @@ public class RSTFactoryImpl extends EFactoryImpl implements RSTFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case RSTPackage.SEGMENT: return createSegment();
-			case RSTPackage.RST_DOCUMENT: return createRSTDocument();
-			case RSTPackage.RELATION: return createRelation();
-			case RSTPackage.GROUP: return createGroup();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		case RSTPackage.SEGMENT:
+			return createSegment();
+		case RSTPackage.RST_DOCUMENT:
+			return createRSTDocument();
+		case RSTPackage.RELATION:
+			return createRelation();
+		case RSTPackage.GROUP:
+			return createGroup();
+		default:
+			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Segment createSegment() {
@@ -91,8 +97,8 @@ public class RSTFactoryImpl extends EFactoryImpl implements RSTFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RSTDocument createRSTDocument() {
@@ -101,8 +107,8 @@ public class RSTFactoryImpl extends EFactoryImpl implements RSTFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Relation createRelation() {
@@ -111,8 +117,8 @@ public class RSTFactoryImpl extends EFactoryImpl implements RSTFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Group createGroup() {
@@ -121,17 +127,17 @@ public class RSTFactoryImpl extends EFactoryImpl implements RSTFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RSTPackage getRSTPackage() {
-		return (RSTPackage)getEPackage();
+		return (RSTPackage) getEPackage();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @deprecated
 	 * @generated
 	 */
@@ -140,4 +146,4 @@ public class RSTFactoryImpl extends EFactoryImpl implements RSTFactory {
 		return RSTPackage.eINSTANCE;
 	}
 
-} //RSTFactoryImpl
+} // RSTFactoryImpl
