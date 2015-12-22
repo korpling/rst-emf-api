@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.corpus-tools</groupId>
 	<artifactId>rst-emf-api</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	<description>The project rst-emf-api offers a simple java api and model to access and describe RST data used by the RST tool (see: http://www.wagsoft.com/RSTTool/). RST stands for rhetorical structure theory. The api provides methods to read and write rs3 files and manipulate the included data.</description>
 	<url>https://github.com/korpling/rst-emf-api</url>
@@ -52,7 +52,7 @@
 		<connection>scm:git:git://github.com/korpling/rst-emf-api.git</connection>
 		<developerConnection>scm:git:git@github.com:korpling/rst-emf-api.git</developerConnection>
 		<url>https://github.com/korpling/rst-emf-api</url>
-	  <tag>rst-emf-api-1.0.4</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<distributionManagement>
 		<snapshotRepository>
