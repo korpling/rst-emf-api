@@ -129,7 +129,6 @@
             </plugin>
             <!-- start: Plugin for automatic releasing -->
             <plugin>
-				<plugin>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5</version>
 				<configuration>
