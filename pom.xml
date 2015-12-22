@@ -119,23 +119,14 @@
             </plugin>
             <!-- start: Plugin for automatic releasing -->
             <plugin>
+				<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.2.1</version>
-				<executions>
-					<execution>
-						<id>default</id>
-						<goals>
-							<goal>perform</goal>        			
-						</goals>
-						<configuration>
-							<pomFileName>rst-emf-api/pom.xml</pomFileName>
-						</configuration>
-					</execution>
-				</executions>
+				<version>2.5</version>
 				<configuration>
-				  <releaseProfiles>release</releaseProfiles>
-				  <goals>package assembly:single deploy</goals>
+					<releaseProfiles>release</releaseProfiles>
+					<goals>package assembly:single deploy</goals>
 				</configuration>
+			</plugin>
 			</plugin>
             <!-- end: Plugin for automatic releasing -->
             <plugin>
