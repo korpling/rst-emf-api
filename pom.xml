@@ -136,7 +136,6 @@
 					<goals>package assembly:single deploy</goals>
 				</configuration>
 			</plugin>
-			</plugin>
             <!-- end: Plugin for automatic releasing -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
