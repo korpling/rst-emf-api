@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.corpus-tools</groupId>
 	<artifactId>rst-emf-api</artifactId>
-	<version>1.0.4-SNAPSHOT</version>
+	<version>1.0.4</version>
 	<packaging>bundle</packaging>
 	<description>The project rst-emf-api offers a simple java api and model to access and describe RST data used by the RST tool (see: http://www.wagsoft.com/RSTTool/). RST stands for rhetorical structure theory. The api provides methods to read and write rs3 files and manipulate the included data.</description>
 	<url>https://github.com/korpling/rst-emf-api</url>
@@ -53,7 +52,8 @@
 		<connection>scm:git:git://github.com/korpling/rst-emf-api.git</connection>
 		<developerConnection>scm:git:git@github.com:korpling/rst-emf-api.git</developerConnection>
 		<url>https://github.com/korpling/rst-emf-api</url>
-	</scm>
+	  <tag>rst-emf-api-1.0.4</tag>
+  </scm>
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
