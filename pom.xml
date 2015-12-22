@@ -27,6 +27,7 @@
 		</developer>
 	</developers>
 	<properties>
+		<java.version>1.7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<component.descriptor.name>serviceComponents.xml</component.descriptor.name>
 		<bundle.file>${project.groupId}.${project.artifactId}_${project.version}.jar</bundle.file>
@@ -34,6 +35,15 @@
 		<license.file>${basedir}/LICENSE</license.file>
 		<notice.file>${basedir}/NOTICE</notice.file>
 		<emf.version>2.9.1-v20130827-0309</emf.version>
+		<maven-bundle-plugin.version>2.1.0</maven-bundle-plugin.version>
+		<maven-notice-plugin.version>1.0.4</maven-notice-plugin.version>
+		<maven-license-plugin.version>1.4.0</maven-license-plugin.version>
+		<maven-release-plugin.version>2.2.1</maven-release-plugin.version>
+		<maven-source-plugin.version>2.2.1</maven-source-plugin.version>
+		<maven-assembly-plugin.version>2.2</maven-assembly-plugin.version>
+		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+		<xmlunit.version>1.3</xmlunit.version>
+		<junit.version>3.8.1</junit.version>
 		<exec-maven-plugin.version>1.4.0</exec-maven-plugin.version>
 		<maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
 		<maven-source-plugin.version>2.4</maven-source-plugin.version>
@@ -71,13 +81,13 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>xmlunit</groupId>
 			<artifactId>xmlunit</artifactId>
-			<version>1.3</version>
+			<version>${xmlunit.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -107,7 +117,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>2.2.1</version>
+				<version>${maven-source-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -121,7 +131,7 @@
 			<!-- start: Plugin for automatic releasing -->
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.2.1</version>
+				<version>${maven-release-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>default</id>
@@ -142,16 +152,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 			<!-- start: assembly plugin -->
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.2</version>
+				<version>${maven-assembly-plugin.version}</version>
 				<configuration>
 					<descriptors>
 						<descriptor>${assemblies.name}</descriptor>
@@ -167,7 +177,7 @@
 			<plugin>
 				<groupId>com.google.code.maven-license-plugin</groupId>
 				<artifactId>maven-license-plugin</artifactId>
-				<version>1.4.0</version>
+				<version>${maven-license-plugin.version}</version>
 				<configuration>
 					<header>${basedir}/src/etc/header.txt</header>
 					<includes>
@@ -181,7 +191,7 @@
 			<plugin>
 				<groupId>org.jasig.maven</groupId>
 				<artifactId>maven-notice-plugin</artifactId>
-				<version>1.0.4</version>
+				<version>${maven-notice-plugin.version}</version>
 				<configuration>
 					<noticeTemplate>./src/etc/NOTICE_template.txt</noticeTemplate>
 				</configuration>
@@ -190,7 +200,7 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.1.0</version>
+				<version>${maven-bundle-plugin.version}</version>
 				<extensions>true</extensions>
 				<executions>
 					<execution>
@@ -202,13 +212,13 @@
 				</executions>
 				<configuration>
 					<manifestLocation>${basedir}/META-INF</manifestLocation>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 					<instructions>
 						<Bundle-Name>${project.artifactId}</Bundle-Name>
 						<Bundle-SymbolicName>${project.groupId}.${project.artifactId};singleton:=true</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-RequiredExecutionEnvironment>JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
+						<Bundle-RequiredExecutionEnvironment>JavaSE-${java.version}</Bundle-RequiredExecutionEnvironment>
 						<Export-Package>de.hu_berlin.german.korpling.rst,
 							de.hu_berlin.german.korpling.rst.resources,
 							de.hu_berlin.german.korpling.rst.exceptions</Export-Package>
